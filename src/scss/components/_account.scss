@@ -1,0 +1,146 @@
+.account {
+  padding-top: 50px;
+  
+  &__container {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #5E6074;
+  }
+
+  &__account-box {
+    margin-bottom: var(--grid-gap);
+  }
+
+  &__info {
+    margin-bottom: var(--grid-gap);
+  }
+
+  &__payments-tabs {
+    margin-bottom: var(--grid-gap);
+  }
+}
+
+.account-box {
+  @include flex-v-center;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+
+  &__text {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-gray);
+  }
+
+  &__number {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-light);
+  }
+
+  &__wrapper {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    @include flex-v-center;
+    gap: var(--grid-gap);
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    @include flex-v-center;
+    padding: 16px 25px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+
+    &::before {
+      @include bg-img-styles;
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    &--add {
+      &::before {
+        background-image: url('../img/add.svg');
+      }
+    }
+
+    &--bill {
+      &::before {
+        background-image: url('../img/file.svg');
+      }
+    }
+
+    &--download {
+      &::before {
+        background-image: url('../img/download.svg');
+      }
+    }
+
+    &:hover {
+      background-color: #999999;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
+
+.info {
+  @include flex-all-sb;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  
+  padding: 60px 40px;
+  background-color: var(--color-ebony-clay);
+  border-radius: 10px;
+
+  &__all-money {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-gray);
+  }
+
+  &__money {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    &--green {
+      color: var(--color-malachite);
+    }
+
+    &--red {
+      color: var(--color-carnation);
+    }
+  }
+}

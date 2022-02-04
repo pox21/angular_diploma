@@ -1,0 +1,43 @@
+.nav {
+
+  &__list {
+    @include flex-v-center;
+    gap: var(--grid-gap);
+  }
+
+  &__link {
+    position: relative;
+    padding: 3px 5px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    outline: none;
+
+    &:hover {
+      color: var(--color-sundance);
+    }
+
+    &:active {
+      color: var(--color-black);
+      background-color: var(--color-sundance);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 98%;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 1px;
+      transform: scaleX(0) translateX(4px);
+      background-color: var(--color-sundance);
+      transform-origin: 100%;
+      transition: transform 0.1s ease-in-out;
+    }
+
+    &:focus::after {
+      transition: transform 0.3s ease-in-out;
+      transform: scaleX(0.9) translateX(4px);
+      transform-origin: 0;
+    }
+  }
+}

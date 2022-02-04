@@ -1,0 +1,49 @@
+.profile {
+  max-width: 288px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-gap: 0 12px;
+
+  &__avatar-link {
+    display: block;
+    grid-row: 2 span;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: var(--color-gray);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @include flex-v-center;
+    margin: 0 0 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    span {
+      margin-right: 4px;
+    }
+  }
+
+  &__btn-more {
+    @include bg-img-styles;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/arrow-down.svg');
+  }
+
+  &__account {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-gray);
+  }
+}

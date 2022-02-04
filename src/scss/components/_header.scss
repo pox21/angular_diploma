@@ -1,0 +1,16 @@
+.header {
+  background-color: var(--color-black);
+  padding: 37px 0;
+
+  &__logo {
+    margin-right: 60px;
+  }
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,40 @@
+.payments-tabs {
+
+  &__list {
+    @include flex-v-center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    color: inherit;
+    padding: 11.5px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: var(--color-ebony-clay);
+    border: 1px solid transparent;
+    border-radius: 24px;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &--active {
+      background-color: var(--color-sundance);
+    }
+
+    &:hover {
+      background-color: #41424D;
+    }
+
+    &:focus {
+      border: 1px solid #C6AB5B;
+    }
+
+    &:active {
+      background-color: var(--color-sundance);
+    }
+
+    span {
+      color: #999;
+    }
+  }
+}
