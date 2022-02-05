@@ -44,6 +44,7 @@ button {
   padding: 0;
   background: transparent;
   cursor: pointer;
+  user-select: none;
 }
 
 .list-reset {
@@ -55,6 +56,10 @@ button {
 .centered {
   width: 100%;
   text-align: center;
+}
+
+.main {
+  padding-bottom: 170px;
 }
 
 .container {
@@ -78,45 +83,24 @@ button {
   clip: rect(0 0 0 0);
 }
 
-.btn {
-  padding: 15px 39px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--color-light);
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 25px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
 
-  &--fill {
-    background-color: var(--color-primary);
-
-    &-primary {
-
-    }
+  &:hover {
+    background-color: #999999;
   }
 
-  &--stroke {
-
-    &-light {
-      border-color: var(--color-light);
-    }
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.2);
   }
-}
 
-.title {
-  margin: 0;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 130%;
-  color: var(--color-ebony);
-
-  &--center {
-    text-align: center;
+  &:active {
+    background-color: transparent;
   }
 }
 

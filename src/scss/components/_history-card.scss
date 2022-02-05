@@ -1,0 +1,35 @@
+.history-card {
+  max-width: 490px;
+  display: grid;
+  grid-template-columns: minmax(auto, 250px) 150px;
+  gap: 30px;
+  padding: 30px;
+  background: var(--color-ebony-clay);
+  border-radius: 10px;
+
+  &__border {
+    grid-column: 2 span;
+    height: 1px;
+    background-color: #5E6074;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-gray);
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+}

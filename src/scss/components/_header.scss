@@ -14,3 +14,12 @@
     margin-right: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    &__logo {
+      margin-right: 20px;
+    }
+  }
+  
+}
