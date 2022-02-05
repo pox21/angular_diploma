@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="preload" href="fonts/Lenora-Medium-Web.woff2" as="font" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>CBS Finance Group</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header header--main">
+  <div class="container header__container">
+    <a href="#" class="logo header__logo">
+      <picture>
+        <source srcset="img/logo.svg" media="(min-width: 800px)">
+        <img src="img/logo-min.svg" alt="CBS logo">
+       </picture>       
+      <!-- <img src="img/logo.svg" alt="CBS Finance Group logo"> -->
+    </a>
+    <!-- navigation -->
+    <nav class="nav header__nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Платежи</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Выписки</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- profile -->
+    <div class="profile header__profile">
+      <a href="#" class="profile__avatar-link">
+        <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
+      </a>
+      <h2 class="profile__title">
+        <span>ООО Мое предприятие</span>
+        <button class="profile__btn-more">
+          
+        </button>
+      </h2>
+      <a href="#" class="profile__account">Основной счет</a>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="account">
+  <h1 class="account-title visually-hidden">Основной счет</h1>
+  <div class="container account__container">
+    <div class="account__account-box account-box">
+      <div class="account-box__wrapper">
+        <span class="account-box__text">Основной счет</span>
+        <span class="account-box__number">80415 123 400000033871</span>
+      </div>
+      <ul class="account-box__list list-reset">
+        <li class="account-box__item">
+          <a href="#" class="account-box__link btn-link account-box__link--add">Новый платёж</a>
+        </li>
+        <li class="account-box__item">
+          <a href="#" class="account-box__link btn-link account-box__link--bill">Выставить счет</a>
+        </li>
+        <li class="account-box__item">
+          <a href="#" class="account-box__link btn-link account-box__link--download" download>Загрузить выписку</a>
+        </li>
+      </ul>
+    </div>
+    <div class="account__info info">
+      <span class="info__all-money">1 420 000,00 ₽</span>
+      <span class="info__item">
+        <span class="info__text">Собственные</span>
+        <span class="info__money">896 000,00 ₽</span>
+      </span>
+      <span class="info__item">
+        <span class="info__text">Заёмные</span>
+        <span class="info__money">123 000,00 ₽</span>
+      </span>
+      <span class="info__item">
+        <span class="info__text">Движения средств за месяц</span>
+        <span class="info__money">
+          <span class="info__money--green">+53 000,00 ₽</span>
+        <span class="info__money--red">-13 000,00 ₽</span>
+        </span>
+      </span>
+    </div>
+    <div class="account__payments-tabs payments-tabs">
+      <ul class="payments-tabs__list list-reset">
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn payments-tabs__btn--active" type="button">Все платежи</button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">Отправлено в банк 
+            <span>(5)</span>
+          </button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">Исполнено  
+            <span>(190)</span>
+          </button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">Черновик 
+            <span>(5)</span>
+          </button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">На подписании
+            <span>(1)</span>
+          </button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">К отправке
+            <span>(7)</span>
+          </button>
+        </li>
+        <li class="payments-tabs__item">
+          <button class="payments-tabs__btn" type="button">Отклонено
+            <span>(2)</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <form action="#" class="account__form-search form-search">
+      <button class="form-search__btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#search-icon" />
+        </svg>
+      </button>
+      <input type="text" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
+    </form>
+  </div>
+</section>
+      <section class="payments-history">
+  <div class="container  payments-history__container">
+    <div class="history payments-history__item">
+      <h2 class="history__title">
+        11 Ноября
+        <span>Сегодня</span>
+      </h2>
+      <ul class=" history__list list-reset">
+        <li class="history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Исполнено</span>
+            <button class="history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class=" history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Отправлено в банк</span>
+            <button class="history-item__btn history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class="history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Исполнено</span>
+            <button class="history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class=" history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Отправлено в банк</span>
+            <button class="history-item__btn history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="history payments-history__item">
+      <h2 class="history__title">
+        10 Ноября
+        <span>Вчера</span>
+      </h2>
+      <ul class=" history__list list-reset">
+        <li class="history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Исполнено</span>
+            <button class="history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class=" history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Отправлено в банк</span>
+            <button class="history-item__btn history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class="history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Исполнено</span>
+            <button class="history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+        <li class=" history__item history-item">
+          <div class="history-item__wrapper">
+            <div class="history-item__name">
+              <div class="history-item__avatar-wrapper">
+                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+              </div>
+              <span class="history-item__payment-type">Основной счет</span>
+              <h3 class="history-item__title">ООО «Майкрософт»</h3>
+            </div>
+            <div class="history-item__money-wrapper">
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+            </div>
+            <span class="history-item__status">Отправлено в банк</span>
+            <button class="history-item__btn history-item__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-item__more-wrapper">
+            <div class="history-item__cards">
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+              <div class="history-item__card history-card">
+                <span class="history-card__name">ООО «Предприятие»</span>
+                <span class="history-card__bank">ПАО Росбанк</span>
+                <div class="history-card__border"></div>
+                <div class="history-card__info">
+                  <span class="history-card__text">Основной счет</span>
+                  <span class="history-card__num">80415 123 400000033871</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">БИК</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">ИНН</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+                <div class="history-card__info">
+                  <span class="history-card__text">КПП</span>
+                  <span class="history-card__num">56787654567</span>
+                </div>
+              </div>
+            </div>
+            <div class="history-item__buttons">
+              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
+              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    </main>
+    
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
