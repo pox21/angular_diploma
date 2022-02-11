@@ -14,6 +14,7 @@ body {
   font-weight: 600;
   background-color: var(--color-vulcan-bg);
   color: var(--color-light);
+  min-height: 100vh;
   // user-select: none; 
 }
 
@@ -32,6 +33,7 @@ a {
 }
 
 .site-container {
+  min-height: inherit;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
@@ -45,6 +47,7 @@ button {
   background: transparent;
   cursor: pointer;
   user-select: none;
+  outline: none;
 }
 
 .list-reset {
@@ -59,6 +62,7 @@ button {
 }
 
 .main {
+  padding-top: 50px;
   padding-bottom: 170px;
 }
 

@@ -1,0 +1,30 @@
+.back {
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-light);
+  }
+
+  &__icon {
+    display: inline-flex;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+    border-radius: 100%;
+    background-color: var(--color-ebony-clay);
+    color: var(--color-sundance);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+}

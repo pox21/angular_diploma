@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="preload" href="fonts/Lenora-Medium-Web.woff2" as="font" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>CBS Finance Group | Новый платеж</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header header--main">
+  <div class="container header__container">
+    <a href="index.html" class="logo header__logo">
+      <picture>
+        <source srcset="img/logo.svg" media="(min-width: 800px)">
+        <img src="img/logo-min.svg" alt="CBS logo">
+       </picture>       
+      <!-- <img src="img/logo.svg" alt="CBS Finance Group logo"> -->
+    </a>
+    <!-- navigation -->
+    <nav class="nav header__nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Платежи</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Выписки</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- profile -->
+    <div class="profile header__profile">
+      <a href="#" class="profile__avatar-link">
+        <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
+      </a>
+      <h2 class="profile__title">
+        <span>ООО Мое предприятие</span>
+        <button class="profile__btn-more">
+          
+        </button>
+      </h2>
+      <a href="#" class="profile__account">Основной счет</a>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="back">
+  <div class="container back__container">
+    <a href="index.html" class="back__btn">
+      <span class="back__icon">
+        <svg>
+          <use xlink:href="img/sprite.svg#arrow-down" />
+        </svg>
+      </span>
+      <span class="back__text">Назад</span>
+    </a>
+  </div>
+</section>
+       <section class="payment">
+   <div class="container">
+
+    <form action="#" class="form-payment form">
+      <div class="form__wrapper">
+        <h2 class="form__title">Новый платёж
+          <span>247123</span>
+        </h2>
+        <label class="form__label field-date">
+          <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+          <button type="button" class="field-date__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#date-icon" />
+              </svg>
+          </button>
+          <span class="field-date__text"></span>
+          <input type="date" class="field-date__date">
+          <span></span>
+        </label>
+        <label class="form__label field-date">
+          <span class="form__placeholder field-date__placeholder"> Дата исполнения платежа </span>
+          <button type="button" class="field-date__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#date-icon" />
+              </svg>
+          </button>
+          <span class="field-date__text"></span>
+          <input type="date" class="field-date__date">
+          <span></span>
+        </label>
+        <div class="form__select select">
+          <input type="hidden" name="select" value="">
+          <div class="select__inner">
+            <span class="select__placeholder">Счет списания</span>
+            <button type="button" class="select__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="select__list">
+            <div class="select__item" tabindex="0" data-id="1" data-value="Основной счет">
+              <span class="select__text">Основной счет</span>
+              <span class="select__value">1 420 000,00 ₽</span>
+            </div>
+            <div class="select__item" tabindex="0" data-id="2" data-value="Второй счёт">
+              <span class="select__text">Второй счёт</span>
+              <span class="select__value">67 000,00 ₽</span>
+            </div>
+            <div class="select__item" tabindex="0" data-id="3" data-value="Сберегательный счёт">
+              <span class="select__text">Сберегательный счёт</span>
+              <span class="select__value">150 000,00 ₽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form__wrapper">
+        <h2 class="form__title">
+          Реквизиты контрагента
+        </h2>
+        <label class="form__label label form__label--max-width">
+          <input class="label__input" type="text" placeholder=" " name="" value="80415 123 400000033871">
+          <span class="label__text">Счет получателя</span>
+        </label>
+        <label class="form__label label">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">ИНН</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+        <label class="form__label label">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">КПП</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+        <label class="form__label label form__label--max-width">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">Наименование получателя</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form__wrapper">
+        <h2 class="form__title">
+          Реквизиты контрагента
+        </h2>
+        <label class="form__label label form__label--max-width">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">Реквизиты банка получателя</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+        <label class="form__label label form__label--max-width">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">Корреспондентский счет получателя</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form__wrapper">
+        <h2 class="form__title">
+          Сумма платежа
+        </h2>
+        <label class="form__label label form__label--max-width form__label--flex">
+          <div class="label__input-wrapper">
+            <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽">
+            <span class="label__text">Сумма</span>
+          </div>
+          <div class="label__input-wrapper label__input-wrapper--line">
+            <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽" disabled>
+            <span class="label__text">Комиссия</span>
+          </div>
+        </label>
+        <div class="form__select select">
+          <input type="hidden" name="select" value="">
+          <div class="select__inner">
+            <span class="select__placeholder">Выбрать НДС</span>
+            <button type="button" class="select__btn">
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="select__list">
+            <div class="select__item" tabindex="0" data-id="1" data-value="Налог на добавленную 1">
+              <!-- <span class="select__text">Основной счет</span> -->
+              <span class="select__value">Налог на добавленную стоимость 1</span>
+            </div>
+            <div class="select__item" tabindex="0" data-id="2" data-value="Налог на добавленную 2">
+              <!-- <span class="select__text">Второй счёт</span> -->
+              <span class="select__value">Налог на добавленную стоимость 2</span>
+            </div>
+            <div class="select__item" tabindex="0" data-id="3" data-value="Налог на добавленную 3">
+              <!-- <span class="select__text">Сберегательный счёт</span> -->
+              <span class="select__value">Налог на добавленную стоимость 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form__tabs form-tabs">
+        <div class="form-tabs__inner">
+          <span class="form-tabs__text form-tabs__text--gray">Очередность платежа</span>
+          <span class="form-tabs__text">Прочие платежи</span>
+        </div>
+        <ul class="form-tabs__items list-reset">
+          <li class="form-tabs__item">
+            <button type="button" class="form-tabs__btn form-tabs__btn--active">1</button>
+          </li>
+          <li class="form-tabs__item">
+            <button type="button" class="form-tabs__btn">2</button>
+          </li>
+          <li class="form-tabs__item">
+            <button type="button" class="form-tabs__btn">3</button>
+          </li>
+          <li class="form-tabs__item">
+            <button type="button" class="form-tabs__btn">4</button>
+          </li>
+          <li class="form-tabs__item">
+            <button type="button" class="form-tabs__btn">5</button>
+          </li>
+        </ul>
+      </div>
+      <div class="form__wrapper">
+        <label class="form__label label form__label--max-width">
+          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <span class="label__text">Код УИН/УИП</span>
+          <span class="label__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+          </span>
+        </label>
+        <label class="form__label label form__label--max-width form__label--height">
+          <textarea class="label__input label__input--textarea" type="text" placeholder=" " name="" value=""></textarea>
+          <span class="label__text label__text--textarea">Назначение платежа</span>
+        </label>
+      </div>
+      <div class="form__wrapper">
+        <label class="label form__label-checkbox form__label--max-width">
+          <input class="label__checkbox visually-hidden" type="checkbox" name="" value="">
+          <span class="label__checkbox-text">Уведомить контрагента</span>
+        </label>
+      </div>
+      <div class="form__buttons">
+        <button class="form__button form__button--primary btn-link">Подписать и отправить</button>
+        <button class="form__button btn-link">Сохранить как черновик</button>
+      </div>
+    </form>
+
+   </div>
+ </section>
+    </main>
+    
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@
     background-color: var(--color-black);
     border: 1px solid transparent;
     border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     color: var(--color-gray);
     outline: none;
 
@@ -44,7 +44,7 @@
     }
   
     &:focus {
-      border: 1px solid #C6AB5B;
+      border-color: var(--color-sundance);
     }
       
   }

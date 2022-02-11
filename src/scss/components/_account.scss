@@ -1,21 +1,13 @@
 .account {
-  padding-top: 50px;
   
   &__container {
-    padding-bottom: 50px;
+    padding-bottom: var(--grid-gap);
   }
 
   &__account-box {
     margin-bottom: var(--grid-gap);
   }
 
-  &__info {
-    margin-bottom: var(--grid-gap);
-  }
-
-  &__payments-tabs {
-    margin-bottom: var(--grid-gap);
-  }
 }
 
 .account-box {
@@ -125,4 +117,25 @@
       color: var(--color-carnation);
     }
   }
+}
+
+@media (max-width: 576px) {
+
+  .info {
+    padding: 20px 10px;
+    gap: 10px;
+
+    &__all-money {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__money {
+      font-size: 14px;
+    }
+  }
+  
 }

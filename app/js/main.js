@@ -34,60 +34,84 @@ historyitemBtn.forEach(function (btn) {
 });
 "use strict";
 
-// const circle = document.querySelectorAll('.progress');
-// const progressAnimation = () => {
-//   let percentageProgress = Math.floor(98);
-//   let radius = circle.getAttribute('r');
-//   let circleLength = 2 * Math.PI * radius;
-//   circle.setAttribute('stroke-dasharray', circleLength);
-//   circle.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
-// }
-// progressAnimation();
-var circles = document.querySelectorAll('.facts-element__circle');
-circles.forEach(function (el) {
-  var progress = el.querySelector('.progress');
-  var percentageProgress;
-  var radius = progress.getAttribute('r');
-  var circleLength = 2 * Math.PI * radius;
-
-  if (el.dataset.percentage) {
-    var full = el.dataset.full;
-    var value = el.dataset.value;
-    var valueBlock = el.querySelector('.facts-element__value');
-    percentageProgress = Math.floor(value / full * 100);
-    valueBlock.textContent = value;
-    progress.setAttribute('stroke-dasharray', circleLength);
-    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
-  } else {
-    var _valueBlock = el.querySelector('.facts-element__value');
-
-    var percent = el.dataset.percent;
-    percentageProgress = Math.floor(percent);
-    _valueBlock.textContent = percent + "%";
-    progress.setAttribute('stroke-dasharray', circleLength);
-    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
-  }
+var dateInput = document.querySelectorAll('.field-date__date');
+dateInput.forEach(function (el) {
+  el.addEventListener('change', function () {
+    var val = new Date(el.value).toLocaleString('ru-Ru', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }).replace('г.', '');
+    el.previousElementSibling.textContent = val;
+  });
 });
 "use strict";
 
-var newsSlider = new Swiper('.news-slider__container', {
-  slidesPerViewm: 1,
-  loop: true,
-  pagination: {
-    el: '.news-slider__pagination',
-    type: 'bullets',
-    clickable: true,
-    bulletElement: 'button'
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.news-slider__button-next',
-    prevEl: '.news-slider__button-prev'
-  },
-  autoplay: {
-    delay: 5000
+var selectEl = document.querySelectorAll('.select');
+
+var addItem = function addItem(select, input, item) {
+  if (select.querySelector('.select__item')) {
+    select.querySelector('.select__item').remove();
   }
+
+  select.insertAdjacentElement('beforeend', item); // input.value = item.dataset.id;
+
+  input.value = item.dataset.value;
+};
+
+var selectOpen = function selectOpen(select) {
+  select.classList.add('open');
+};
+
+var selectClose = function selectClose(select) {
+  select.classList.remove('open');
+};
+
+selectEl.forEach(function (select) {
+  var selectBtn = select.querySelector('.select__btn');
+  var selectInput = select.querySelector('input');
+  var selectInner = select.querySelector('.select__inner');
+  var selectList = select.querySelector('.select__list');
+  selectBtn.addEventListener('click', function () {
+    if (select.classList.contains('open')) {
+      selectClose(select);
+    } else {
+      selectOpen(select);
+    }
+
+    select.addEventListener('mouseleave', function () {
+      selectClose(select);
+    });
+    select.addEventListener('click', function (_ref) {
+      var target = _ref.target;
+
+      if (target.closest('.select__list')) {
+        var item = target.closest('.select__item');
+        addItem(selectInner, selectInput, item.cloneNode(true));
+        selectClose(select);
+      }
+    });
+  });
 });
+// const slider = new Swiper('.swiper', {
+//   slidesPerViewm: 1,
+//   loop: true,
+//   pagination: {
+//     el: '.pagination',
+//     type: 'bullets',
+//     clickable: true,
+//     bulletElement: 'button',
+//   },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.button-next',
+//     prevEl: '.button-prev',
+//   },
+//   // autoplay: {
+//   //   delay: 5000,
+//   // },
+// });
+"use strict";
 /**
   * название функции
   *

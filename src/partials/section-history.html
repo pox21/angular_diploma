@@ -1,5 +1,50 @@
 <section class="payments-history">
   <div class="container  payments-history__container">
+    <div class="payments-history__tabs tabs">
+      <ul class="tabs__list list-reset">
+        <li class="tabs__item">
+          <button class="tabs__btn tabs__btn--active" type="button">Все платежи</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Отправлено в банк 
+            <span>(5)</span>
+          </button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Исполнено  
+            <span>(190)</span>
+          </button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Черновик 
+            <span>(5)</span>
+          </button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">На подписании
+            <span>(1)</span>
+          </button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">К отправке
+            <span>(7)</span>
+          </button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Отклонено
+            <span>(2)</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <form action="#" class="payments-history__form-search form-search">
+      <button class="form-search__btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#search-icon" />
+        </svg>
+      </button>
+      <input type="text" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
+    </form>
     <div class="history payments-history__item">
       <h2 class="history__title">
         11 Ноября
@@ -87,7 +132,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Отправлено в банк</span>
@@ -308,7 +353,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 6 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>
@@ -450,7 +495,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 10 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>

@@ -1,0 +1,78 @@
+.field-date {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    font-size: 18px;
+    color: var(--color-sundance);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &__date {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background-color: transparent;
+    outline: none;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    
+    & + span {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      transition: border-color 0.3s ease;
+    }
+    
+    &:focus {
+      & + span {
+        border-color: var(--color-sundance);
+      }
+    }
+  }
+    
+  &__date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    background-size: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  &__text {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  // &__placeholder {
+  //   color: #bbb;
+  //   font-size: 14px;
+  //   margin-bottom: 5px;
+  // }
+  
+}

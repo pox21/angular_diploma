@@ -1,4 +1,4 @@
-.payments-tabs {
+.tabs {
 
   &__list {
     @include flex-v-center;
@@ -16,6 +16,7 @@
     border: 1px solid transparent;
     border-radius: 24px;
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    outline: none;
 
     &--active {
       background-color: var(--color-sundance);

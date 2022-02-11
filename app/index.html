@@ -17,7 +17,7 @@
   <div class="site-container">
     <header class="header header--main">
   <div class="container header__container">
-    <a href="#" class="logo header__logo">
+    <a href="index.html" class="logo header__logo">
       <picture>
         <source srcset="img/logo.svg" media="(min-width: 800px)">
         <img src="img/logo-min.svg" alt="CBS logo">
@@ -62,7 +62,7 @@
       </div>
       <ul class="account-box__list list-reset">
         <li class="account-box__item">
-          <a href="#" class="account-box__link btn-link account-box__link--add">Новый платёж</a>
+          <a href="new-payment.html" class="account-box__link btn-link account-box__link--add">Новый платёж</a>
         </li>
         <li class="account-box__item">
           <a href="#" class="account-box__link btn-link account-box__link--bill">Выставить счет</a>
@@ -90,44 +90,49 @@
         </span>
       </span>
     </div>
-    <div class="account__payments-tabs payments-tabs">
-      <ul class="payments-tabs__list list-reset">
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn payments-tabs__btn--active" type="button">Все платежи</button>
+    
+  </div>
+</section>
+      <section class="payments-history">
+  <div class="container  payments-history__container">
+    <div class="payments-history__tabs tabs">
+      <ul class="tabs__list list-reset">
+        <li class="tabs__item">
+          <button class="tabs__btn tabs__btn--active" type="button">Все платежи</button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">Отправлено в банк 
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Отправлено в банк 
             <span>(5)</span>
           </button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">Исполнено  
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Исполнено  
             <span>(190)</span>
           </button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">Черновик 
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Черновик 
             <span>(5)</span>
           </button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">На подписании
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">На подписании
             <span>(1)</span>
           </button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">К отправке
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">К отправке
             <span>(7)</span>
           </button>
         </li>
-        <li class="payments-tabs__item">
-          <button class="payments-tabs__btn" type="button">Отклонено
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button">Отклонено
             <span>(2)</span>
           </button>
         </li>
       </ul>
     </div>
-    <form action="#" class="account__form-search form-search">
+    <form action="#" class="payments-history__form-search form-search">
       <button class="form-search__btn">
         <svg>
           <use xlink:href="img/sprite.svg#search-icon" />
@@ -135,10 +140,6 @@
       </button>
       <input type="text" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
     </form>
-  </div>
-</section>
-      <section class="payments-history">
-  <div class="container  payments-history__container">
     <div class="history payments-history__item">
       <h2 class="history__title">
         11 Ноября
@@ -226,7 +227,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Отправлено в банк</span>
@@ -447,7 +448,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 6 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>
@@ -589,7 +590,7 @@
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 10 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>
