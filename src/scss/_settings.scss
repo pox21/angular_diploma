@@ -108,6 +108,26 @@ button {
   }
 }
 
+.arrow-btn {
+  width: 24px;
+  height: 24px;
+  background: #111320;
+  color: var(--color-sundance);
+  border: 1px solid transparent;
+  border-radius: 100%;
+  transition: border-color 0.3s ease-in-out;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &:focus {
+    border-color: var(--color-sundance);
+  }
+}
+
 
 .custom-checkbox {
   &__input {

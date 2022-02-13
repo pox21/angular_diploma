@@ -1,21 +1,14 @@
-// const slider = new Swiper('.swiper', {
-//   slidesPerViewm: 1,
-//   loop: true,
+const slider = new Swiper('.auth-slider', {
+  slidesPerViewm: 1,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.auth-slider__btn-next',
+    prevEl: '.auth-slider__btn-prev',
+  },
 
-//   pagination: {
-//     el: '.pagination',
-//     type: 'bullets',
-//     clickable: true,
-//     bulletElement: 'button',
-//   },
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.button-next',
-//     prevEl: '.button-prev',
-//   },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 
-//   // autoplay: {
-//   //   delay: 5000,
-//   // },
-
-// });
+});

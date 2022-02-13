@@ -5,11 +5,13 @@
 @import "settings";
 
 
+@import "./components/form";
 
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/account";
 @import "./components/payments-history";
+@import "./components/auth";
 
 // @import "./components/footer";
 
@@ -21,7 +23,6 @@
 @import "./components/history-card";
 @import "./components/back-btn";
 @import "./components/field-date";
-@import "./components/form";
 // @import "./components/header-contacts";
 // @import "./components/video-block";
 // @import "./components/learn-more";

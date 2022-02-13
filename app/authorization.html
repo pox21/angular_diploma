@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>CBS Finance Group | Authorization</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header header--main header-min">
+      <div class="container header__container">
+        <a href="index.html" class="logo header__logo">
+          <picture>
+            <source srcset="img/logo.svg" media="(min-width: 800px)">
+            <img src="img/logo-min.svg" alt="CBS logo">
+           </picture>       
+          <!-- <img src="img/logo.svg" alt="CBS Finance Group logo"> -->
+        </a>
+        
+      </div>
+    </header>
+    <main class="main">
+      <section class="auth">
+  <div class="container auth__container">
+    <div class="auth__slider-wrapper">
+      <div class="auth__slider auth-slider">
+        <ul class="swiper-wrapper list-reset">
+          <!-- Slides -->
+          <li class="auth-slider__slide swiper-slide">
+            <img src="https://picsum.photos/640/360" alt="img-name">
+          </li>
+          <li class="auth-slider__slide swiper-slide">
+            <img src="http://placeimg.com/640/360/any" alt="img-name">
+          </li>
+          <li class="auth-slider__slide swiper-slide">
+            <img src="https://placebeard.it/640x360" alt="img-name">
+          </li>
+        </ul>   
+      </div>
+      <button class="auth-slider__btn-prev arrow-btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+      </button>
+      <button class="auth-slider__btn-next arrow-btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+      </button>
+    </div>
+    
+    <form action="#" class="auth__form form">
+      <h2 class="form__title form__title--size">Авторизация</h2>
+      <label class="label form__label label--error">
+        <span class="label__error-text">Проверьте правильность данных</span>
+        <input class="label__input" type="tel" placeholder=" " name="phone">
+        <span class="label__text">Номер телефона:</span>
+      </label>
+      <label class="label form__label">
+        <!-- <span class="label__error-text">Проверьте правильность данных</span> -->
+        <input class="label__input" type="password" placeholder=" " name="password">
+        <span class="label__text">Пароль:</span>
+      </label>
+      <button class="btn-link form__button form__button--primary" type="submit">Войти</button>
+    </form>
+  </div>
+</section>
+    </main>
+    
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

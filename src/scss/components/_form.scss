@@ -25,6 +25,12 @@
     line-height: 48px;
     color: var(--color-light);
 
+    &--size {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 32px;
+    }
+
     span {
       padding-left: 10px;
       font-size: 18px;
@@ -100,6 +106,10 @@
 .label {
   border: 1px solid transparent;
   transition: border-color 0.3s ease-in-out;
+
+  &--error {
+    border-color: var(--color-carnation);
+  }
 
   &:focus-within {
     border-color: var(--color-sundance);
@@ -193,6 +203,17 @@
     &--textarea {
       top: 25px;
     }
+  }
+
+  &__error-text {
+    position: absolute;
+    left: 0;
+    bottom: -45%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-carnation);
   }
 
   &__checkbox-text {
@@ -314,19 +335,6 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background: #111320;
-    color: var(--color-sundance);
-    border: 1px solid transparent;
-    border-radius: 100%;
-    transition: border-color 0.3s ease-in-out;
-
-    svg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
 
     &:focus {
       border-color: var(--color-sundance);

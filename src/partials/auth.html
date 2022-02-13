@@ -1,0 +1,45 @@
+<section class="auth">
+  <div class="container auth__container">
+    <div class="auth__slider-wrapper">
+      <div class="auth__slider auth-slider">
+        <ul class="swiper-wrapper list-reset">
+          <!-- Slides -->
+          <li class="auth-slider__slide swiper-slide">
+            <img src="https://picsum.photos/640/360" alt="img-name">
+          </li>
+          <li class="auth-slider__slide swiper-slide">
+            <img src="http://placeimg.com/640/360/any" alt="img-name">
+          </li>
+          <li class="auth-slider__slide swiper-slide">
+            <img src="https://placebeard.it/640x360" alt="img-name">
+          </li>
+        </ul>   
+      </div>
+      <button class="auth-slider__btn-prev arrow-btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+      </button>
+      <button class="auth-slider__btn-next arrow-btn">
+        <svg>
+          <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+      </button>
+    </div>
+    
+    <form action="#" class="auth__form form">
+      <h2 class="form__title form__title--size">Авторизация</h2>
+      <label class="label form__label label--error">
+        <span class="label__error-text">Проверьте правильность данных</span>
+        <input class="label__input" type="tel" placeholder=" " name="phone">
+        <span class="label__text">Номер телефона:</span>
+      </label>
+      <label class="label form__label">
+        <!-- <span class="label__error-text">Проверьте правильность данных</span> -->
+        <input class="label__input" type="password" placeholder=" " name="password">
+        <span class="label__text">Пароль:</span>
+      </label>
+      <button class="btn-link form__button form__button--primary" type="submit">Войти</button>
+    </form>
+  </div>
+</section>

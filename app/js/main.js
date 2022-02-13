@@ -93,25 +93,20 @@ selectEl.forEach(function (select) {
     });
   });
 });
-// const slider = new Swiper('.swiper', {
-//   slidesPerViewm: 1,
-//   loop: true,
-//   pagination: {
-//     el: '.pagination',
-//     type: 'bullets',
-//     clickable: true,
-//     bulletElement: 'button',
-//   },
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.button-next',
-//     prevEl: '.button-prev',
-//   },
-//   // autoplay: {
-//   //   delay: 5000,
-//   // },
-// });
 "use strict";
+
+var slider = new Swiper('.auth-slider', {
+  slidesPerViewm: 1,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.auth-slider__btn-next',
+    prevEl: '.auth-slider__btn-prev'
+  } // autoplay: {
+  //   delay: 5000,
+  // },
+
+});
 /**
   * название функции
   *
