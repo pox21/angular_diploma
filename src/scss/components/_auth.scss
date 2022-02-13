@@ -37,6 +37,24 @@
       min-width: 148px;
       align-self: flex-start;
       margin-top: 20px;
+      
+
+      &:hover {
+        border-color: #705C21;
+        background-color: #705C21;
+      }
+
+      &:active {
+        border-color: #3F361A;
+        background-color: #3F361A;
+      }
+
+      &:disabled {
+        border-color: #46495C;
+        background-color: #46495C;
+        color: var(--color-black);
+      }
+      
     }
 
   }

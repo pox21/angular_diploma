@@ -5,13 +5,13 @@
         <ul class="swiper-wrapper list-reset">
           <!-- Slides -->
           <li class="auth-slider__slide swiper-slide">
-            <img src="https://picsum.photos/640/360" alt="img-name">
+            <img src="" alt="img-name">
           </li>
           <li class="auth-slider__slide swiper-slide">
-            <img src="http://placeimg.com/640/360/any" alt="img-name">
+            <img src=" alt="img-name">
           </li>
           <li class="auth-slider__slide swiper-slide">
-            <img src="https://placebeard.it/640x360" alt="img-name">
+            <img src="" alt="img-name">
           </li>
         </ul>   
       </div>
@@ -42,4 +42,9 @@
       <button class="btn-link form__button form__button--primary" type="submit">Войти</button>
     </form>
   </div>
+
+  <script>
+    document.querySelectorAll('.auth-slider__slide img')
+    .forEach(img => img.src = `https://loremflickr.com/720/1080?lock=${Math.ceil(Math.random() * 1000)}`);
+  </script>
 </section>

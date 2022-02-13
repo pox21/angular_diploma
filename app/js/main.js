@@ -98,6 +98,7 @@ selectEl.forEach(function (select) {
 var slider = new Swiper('.auth-slider', {
   slidesPerViewm: 1,
   loop: true,
+  spaceBetween: 20,
   // Navigation arrows
   navigation: {
     nextEl: '.auth-slider__btn-next',
@@ -106,6 +107,26 @@ var slider = new Swiper('.auth-slider', {
   //   delay: 5000,
   // },
 
+});
+"use strict";
+
+var tooltipsBtns = document.querySelectorAll('.label__icon');
+tooltipsBtns.forEach(function (btn) {
+  btn.addEventListener('click', function (_ref) {
+    var target = _ref.target;
+
+    if (btn.classList.contains('active')) {
+      btn.classList.remove('active');
+      return;
+    }
+
+    if (target.classList.contains('label__icon') || target.classList.contains('icon')) {
+      tooltipsBtns.forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      btn.classList.toggle('active');
+    }
+  });
 });
 /**
   * название функции

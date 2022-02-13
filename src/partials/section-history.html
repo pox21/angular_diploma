@@ -55,7 +55,7 @@
           <div class="history-item__wrapper">
             <div class="history-item__name">
               <div class="history-item__avatar-wrapper">
-                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+                <img src="https://loremflickr.com/240/240" alt="avatar" class="history-item__img">
               </div>
               <span class="history-item__payment-type">Основной счет</span>
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
@@ -197,7 +197,8 @@
           <div class="history-item__wrapper">
             <div class="history-item__name">
               <div class="history-item__avatar-wrapper">
-                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+                <img src="https://loremflickr.com/240/240" alt="avatar" class="history-item__img">
+                
               </div>
               <span class="history-item__payment-type">Основной счет</span>
               <h3 class="history-item__title">ООО «Майкрософт»</h3>
@@ -630,4 +631,9 @@
       </ul>
     </div>
   </div>
+  <script>
+    document.querySelectorAll('.history-item__img')
+    .forEach(img => img.src = `https://loremflickr.com/240/240?lock=${Math.ceil(Math.random() * 1000)}`);
+  </script>
 </section>
+

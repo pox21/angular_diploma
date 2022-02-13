@@ -276,7 +276,8 @@
     height: 24px;
     cursor: pointer;
     color: var(--color-sundance);
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    user-select: none;
 
     svg {
       width: 100%;
@@ -286,12 +287,42 @@
       transition: fill 0.3s ease-in-out, ;
     }
 
+    & .tooltip {
+      position: absolute;
+      top: 60px;
+      right: -18px;
+      transform: translateY(-100%);
+      opacity: 0;
+      width: 0;
+      will-change: width;
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.2s ease;
+    }
+
     &:hover {
       color: var(--color-ebony-clay);
-      transform: translateY(-50%) scale(1.1);
 
       svg {
         fill: var(--color-sundance);
+      }
+    }
+
+    &:focus {
+      color: var(--color-ebony-clay);
+
+      svg {
+        fill: var(--color-sundance);
+      }
+    }
+
+    &.active {
+      z-index: 2;
+
+      & .tooltip {
+        transform: translateY(0);
+        opacity: 1;
+        width: 250px;
+        will-change: width;
+        transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), width 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
     }
 
@@ -335,9 +366,14 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
 
     &:focus {
       border-color: var(--color-sundance);
+    }
+
+    &:active {
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
@@ -405,6 +441,10 @@
       border-bottom-right-radius: 0;
     }
 
+    .select__btn {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
     .select__list {
       max-height: 200px;
       overflow-y: auto;
@@ -456,8 +496,21 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
     &--active {
+      background-color: var(--color-sundance);
+    }
+
+    &:hover {
+      background-color: var(--color-ebony-clay);
+    }
+
+    &:focus {
+      border-color: var(--color-sundance);
+    }
+
+    &:active {
       background-color: var(--color-sundance);
     }
   }
