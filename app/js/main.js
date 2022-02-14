@@ -111,20 +111,38 @@ var slider = new Swiper('.auth-slider', {
 "use strict";
 
 var tooltipsBtns = document.querySelectorAll('.label__icon');
+
+var tooltipOpen = function tooltipOpen(tooltip) {
+  tooltip.classList.add('active');
+  tooltip.style.overflow = 'visible';
+};
+
+var tooltipClose = function tooltipClose(tooltip) {
+  tooltip.classList.remove('active');
+  setTimeout(function () {
+    tooltip.style.overflow = 'hidden';
+  }, 200);
+};
+
 tooltipsBtns.forEach(function (btn) {
+  btn.addEventListener('mouseleave', function () {
+    tooltipClose(btn);
+  });
   btn.addEventListener('click', function (_ref) {
     var target = _ref.target;
 
-    if (btn.classList.contains('active')) {
-      btn.classList.remove('active');
-      return;
-    }
-
     if (target.classList.contains('label__icon') || target.classList.contains('icon')) {
+      if (btn.classList.contains('active')) {
+        tooltipClose(btn);
+        return;
+      }
+
       tooltipsBtns.forEach(function (btn) {
-        btn.classList.remove('active');
+        tooltipClose(btn);
       });
-      btn.classList.toggle('active');
+      setTimeout(function () {
+        tooltipOpen(btn);
+      }, 210);
     }
   });
 });

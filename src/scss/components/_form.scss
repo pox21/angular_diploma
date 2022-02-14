@@ -278,6 +278,7 @@
     color: var(--color-sundance);
     transition: color 0.3s ease-in-out;
     user-select: none;
+    overflow: hidden;
 
     svg {
       width: 100%;
