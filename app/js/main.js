@@ -36,7 +36,6 @@ historyitemBtn.forEach(function (btn) {
 
 var dateInput = document.querySelectorAll('.field-date__date');
 dateInput.forEach(function (el) {
-  var textDateEl = el.parentNode.querySelector('.field-date__text');
   var placeholder = el.parentNode.querySelector('.field-date__placeholder');
   el.addEventListener('change', function () {
     var val = new Date(el.value).toLocaleString('ru-Ru', {
@@ -44,7 +43,12 @@ dateInput.forEach(function (el) {
       month: 'long',
       year: 'numeric'
     }).replace('г.', '');
-    placeholder.insertAdjacentHTML('afterend', "<span class=\"field-date__text\">".concat(val, "</span>")); // textDateEl.textContent = val;
+
+    if (!placeholder.nextElementSibling.classList.contains('field-date__text')) {
+      placeholder.insertAdjacentHTML('afterend', "<span class=\"field-date__text\">".concat(val, "</span>"));
+    } else {
+      placeholder.nextElementSibling.textContent = val;
+    }
 
     placeholder.style.fontSize = 14 + 'px';
   });

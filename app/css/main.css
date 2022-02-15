@@ -1330,5 +1330,7 @@ button {
     font-weight: 600;
     font-size: 16px;
     line-height: 17px; }
+  .field-date input:active + .label .field-date__btn svg {
+    fill: var(--color-sundance); }
 
 /*# sourceMappingURL=main.css.map */
