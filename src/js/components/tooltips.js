@@ -44,6 +44,25 @@ tooltipsBtns.forEach(btn => {
     }
   });
 
+  btn.addEventListener('keypress', (e) => {
+    e.preventDefault();
+    if (e.key === ' ' || e.key === 'Enter') {
+      if (btn.classList.contains('active')) {
+        tooltipClose(btn)
+        return
+      }
+
+      tooltipsBtns.forEach(btn => {
+        tooltipClose(btn);
+      });
+
+      setTimeout(() => {
+        tooltipOpen(btn);
+      }, 210)
+    }
+
+  });
+
   
 
 })

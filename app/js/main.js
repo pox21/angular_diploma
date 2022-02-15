@@ -162,6 +162,23 @@ tooltipsBtns.forEach(function (btn) {
       }, 210);
     }
   });
+  btn.addEventListener('keypress', function (e) {
+    e.preventDefault();
+
+    if (e.key === ' ' || e.key === 'Enter') {
+      if (btn.classList.contains('active')) {
+        tooltipClose(btn);
+        return;
+      }
+
+      tooltipsBtns.forEach(function (btn) {
+        tooltipClose(btn);
+      });
+      setTimeout(function () {
+        tooltipOpen(btn);
+      }, 210);
+    }
+  });
 });
 /**
   * название функции

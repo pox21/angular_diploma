@@ -16,7 +16,7 @@
               </svg>
             </button>
           </label>
-          <input type="date" class="field-date__date" name="">
+          <input type="date" class="field-date__date" name="date-name1">
         </div>
         <div class="field-date">
           <label class="form__label label">
@@ -28,7 +28,7 @@
               </svg>
             </button>
           </label>
-          <input type="date" class="field-date__date" name="">
+          <input type="date" class="field-date__date" name="date-name2">
         </div>
         <div class="form__select select">
           <input type="hidden" name="select" value="">
@@ -61,38 +61,38 @@
           Реквизиты контрагента
         </h2>
         <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="" value="80415 123 400000033871">
+          <input class="label__input" type="text" placeholder=" " name="name" value="80415 123 400000033871">
           <span class="label__text">Счет получателя</span>
         </label>
         <label class="form__label label">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="inn" value="">
           <span class="label__text">ИНН</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
         <label class="form__label label">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="kpp" value="">
           <span class="label__text">КПП</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
         <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="recipient" value="">
           <span class="label__text">Наименование получателя</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
       </div>
       <div class="form__wrapper">
@@ -100,42 +100,42 @@
           Реквизиты контрагента
         </h2>
         <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="bank" value="">
           <span class="label__text">Реквизиты банка получателя</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
         <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="beneficiary" value="">
           <span class="label__text">Корреспондентский счет получателя</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
       </div>
       <div class="form__wrapper">
         <h2 class="form__title">
           Сумма платежа
         </h2>
-        <label class="form__label label form__label--max-width form__label--flex">
-          <div class="label__input-wrapper">
-            <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽">
+        <div class="form__label label form__label--max-width form__label--flex">
+          <label class="label__input-wrapper">
+            <input class="label__input" type="text" placeholder=" " name="sum" value="0,00 ₽">
             <span class="label__text">Сумма</span>
-          </div>
-          <div class="label__input-wrapper label__input-wrapper--padding">
-            <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽" disabled>
+          </label>
+          <label class="label__input-wrapper label__input-wrapper--padding">
+            <input class="label__input" type="text" placeholder=" " name="commission" value="0,00 ₽" disabled>
             <span class="label__text">Комиссия</span>
-          </div>
-        </label>
+          </label>
+        </div>
         <div class="form__select select">
-          <input type="hidden" name="select" value="">
+          <input type="hidden" name="select2" value="">
           <div class="select__inner">
             <span class="select__placeholder">Выбрать НДС</span>
             <button type="button" class="select__btn arrow-btn">
@@ -185,23 +185,23 @@
       </div>
       <div class="form__wrapper">
         <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="" value="">
+          <input class="label__input" type="text" placeholder=" " name="uin" value="">
           <span class="label__text">Код УИН/УИП</span>
-          <button type="button" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </button>
+          </span>
         </label>
         <label class="form__label label form__label--max-width form__label--height">
-          <textarea class="label__input label__input--textarea" type="text" placeholder=" " name="" value=""></textarea>
+          <textarea class="label__input label__input--textarea" placeholder=" " name="purpose" ></textarea>
           <span class="label__text label__text--textarea">Назначение платежа</span>
         </label>
       </div>
       <div class="form__wrapper">
         <div class="checkbox form__label--max-width">
-          <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="" value="">
+          <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="checkbox" value="">
           <label class="checkbox__label" for="checkbox">
             Уведомить контрагента
           </label>
