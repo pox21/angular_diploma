@@ -921,12 +921,16 @@ button {
     justify-content: space-around; } }
 
 .auth {
-  margin-top: -10px; }
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  margin-top: -50px; }
   .auth__container {
     display: flex;
     align-items: center;
     gap: var(--grid-gap);
-    padding: 0 20px; }
+    padding: 0 20px;
+    width: 100%; }
   .auth__slider-wrapper {
     position: relative; }
   .auth__slider {
