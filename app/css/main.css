@@ -320,10 +320,9 @@ button {
     top: 7px; }
   .label .label__input {
     margin-top: auto;
-    border: 1px solid transparent;
+    border: none;
     background-color: transparent;
     width: 100%;
-    height: 17px;
     outline: none;
     color: var(--color-light);
     font-weight: 600;
@@ -549,9 +548,7 @@ button {
       font-size: 16px;
       background-color: var(--color-sundance); }
   .form__placeholder {
-    color: #bbb;
-    font-size: 14px;
-    margin-bottom: 5px; }
+    color: #bbb; }
   .form__select {
     grid-column: 2 span; }
 
@@ -1049,6 +1046,7 @@ button {
   align-items: center;
   grid-gap: 12px; }
   .profile__wrapper-avatar {
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -1266,11 +1264,14 @@ button {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer; }
+  .field-date .label {
+    gap: 6px; }
   .field-date__placeholder {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
-    color: var(--color-gray); }
+    color: var(--color-gray);
+    transition: font-size 0.2s ease-in-out; }
   .field-date__btn {
     display: flex;
     align-items: center;
@@ -1328,6 +1329,6 @@ button {
     font-size: 16px;
     font-weight: 600;
     font-size: 16px;
-    line-height: 19px; }
+    line-height: 17px; }
 
 /*# sourceMappingURL=main.css.map */
