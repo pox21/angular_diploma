@@ -1,28 +1,43 @@
 .profile {
   max-width: 288px;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  grid-gap: 0 12px;
+  display: flex;
+  align-items: center;
+  grid-gap: 12px;
 
-  &__avatar-link {
-    display: block;
-    grid-row: 2 span;
+  &__wrapper-avatar {
     width: 40px;
     height: 40px;
     border-radius: 100%;
     overflow: hidden;
     background-color: var(--color-gray);
+    outline: none;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+    &--big {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    &--big {
+      gap: 9px;
+    }
   }
 
   &__title {
     @include flex-v-center;
-    margin: 0 0 4px;
+    margin: 0;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;

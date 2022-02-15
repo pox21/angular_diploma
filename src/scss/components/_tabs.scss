@@ -1,10 +1,7 @@
 .tabs {
-
-  &__list {
-    @include flex-v-center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
+  @include flex-v-center;
+  gap: 18px;
+  flex-wrap: wrap;
 
   &__btn {
     color: inherit;
@@ -36,6 +33,7 @@
 
     span {
       color: #999;
+      font-weight: 500;
     }
   }
 }

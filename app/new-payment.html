@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>CBS Finance Group | Новый платеж</title>
@@ -37,16 +38,18 @@
     </nav> 
     <!-- profile -->
     <div class="profile header__profile"> 
-      <a href="#" class="profile__avatar-link">
+      <a href="#" class="profile__wrapper-avatar">
         <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
       </a>
-      <h2 class="profile__title">
-        <span>ООО Мое предприятие</span>
-        <button class="profile__btn-more">
-          
-        </button>
-      </h2>
-      <a href="#" class="profile__account">Основной счет</a>
+      <div class="profile__text">
+        <h2 class="profile__title">
+          <span>ООО Мое предприятие</span>
+          <button class="profile__btn-more">
+            
+          </button>
+        </h2>
+        <a href="#" class="profile__account">Основной счет</a>
+      </div>
     </div> 
   </div>
 </header>
@@ -72,28 +75,30 @@
         <h2 class="form__title">Новый платёж
           <span>247123</span>
         </h2>
-        <label class="form__label field-date">
-          <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
-          <button type="button" class="field-date__btn">
+        <div class="field-date">
+          <label class="form__label label">
+            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+            <span class="field-date__text"></span>
+            <button type="button" class="field-date__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#date-icon" />
               </svg>
-          </button>
-          <span class="field-date__text"></span>
-          <input type="date" class="field-date__date">
-          <span></span>
-        </label>
-        <label class="form__label field-date">
-          <span class="form__placeholder field-date__placeholder"> Дата исполнения платежа </span>
-          <button type="button" class="field-date__btn">
+            </button>
+          </label>
+          <input type="date" class="field-date__date" name="">
+        </div>
+        <div class="field-date">
+          <label class="form__label label">
+            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+            <span class="field-date__text"></span>
+            <button type="button" class="field-date__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#date-icon" />
               </svg>
-          </button>
-          <span class="field-date__text"></span>
-          <input type="date" class="field-date__date">
-          <span></span>
-        </label>
+            </button>
+          </label>
+          <input type="date" class="field-date__date" name="">
+        </div>
         <div class="form__select select">
           <input type="hidden" name="select" value="">
           <div class="select__inner">
@@ -193,7 +198,7 @@
             <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽">
             <span class="label__text">Сумма</span>
           </div>
-          <div class="label__input-wrapper label__input-wrapper--line">
+          <div class="label__input-wrapper label__input-wrapper--padding">
             <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽" disabled>
             <span class="label__text">Комиссия</span>
           </div>
@@ -264,10 +269,13 @@
         </label>
       </div>
       <div class="form__wrapper">
-        <label class="label form__label-checkbox form__label--max-width">
-          <input class="label__checkbox visually-hidden" type="checkbox" name="" value="">
-          <span class="label__checkbox-text">Уведомить контрагента</span>
-        </label>
+        <div class="checkbox form__label--max-width">
+          <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="" value="">
+          <label class="checkbox__label" for="checkbox">
+            Уведомить контрагента
+          </label>
+        </div>
+        
       </div>
       <div class="form__buttons">
         <button class="form__button form__button--primary btn-link">Подписать и отправить</button>

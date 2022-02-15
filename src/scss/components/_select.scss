@@ -1,0 +1,120 @@
+.select {
+  position: relative;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 62px;
+    padding: 10px 16px;
+    background-color: var(--color-ebony-clay);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    will-change: border-radius;
+    transition: border-color 0.3s ease-in-out, border-radius 0.6s ease-in-out;
+    position: relative;
+    z-index: 2;
+
+    &:focus-within {
+      // border-color: var(--color-sundance);
+    }
+  }
+
+  &__placeholder {
+    color: #bbb;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+
+    &:focus {
+      border-color: var(--color-sundance);
+    }
+
+    &:active {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__text {
+    color: var(--color-gray);
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    max-height: 0;
+    overflow-y: hidden;
+    background-color: var(--color-ebony-clay);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    will-change: max-height;
+    transition: max-height 0.3s ease-in-out;
+
+    & .select__item {
+      display: flex;
+      gap: 5px;
+      padding: 20px 20px;
+      
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      cursor: pointer;
+      outline: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-vulcan-bg);
+      }
+
+      &:hover {
+        background-color: #232535;
+      }
+
+      &:focus {
+        background-color: #232535;
+      }
+    }
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+    }
+  }
+
+  &.open {
+
+    .select__inner {
+      transition: border-color 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .select__btn {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .select__list {
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 3;
+    }
+  }
+}

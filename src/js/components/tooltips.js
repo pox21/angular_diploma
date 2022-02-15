@@ -14,6 +14,12 @@ const tooltipClose = (tooltip) => {
 
 tooltipsBtns.forEach(btn => {
 
+  btn.addEventListener('mouseenter', () => {
+    setTimeout(() => {
+      tooltipOpen(btn);
+    }, 210)
+  });
+
   btn.addEventListener('mouseleave', () => {
     tooltipClose(btn);
   });

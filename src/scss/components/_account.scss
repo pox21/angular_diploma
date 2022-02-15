@@ -36,38 +36,27 @@
     flex-direction: column;
   }
 
-  &__list {
+  &__buttons {
     @include flex-v-center;
     gap: var(--grid-gap);
     flex-wrap: wrap;
   }
 
-  &__link {
+  &__btn {
+    gap: 10px;
+    padding: 15px 32px;
 
-    &::before {
-      @include bg-img-styles;
-      content: '';
+    &-icon {
       display: block;
       width: 24px;
       height: 24px;
-      margin-right: 10px;
-    }
+      color: var(--color-gray); 
 
-    &--add {
-      &::before {
-        background-image: url('../img/add.svg');
-      }
-    }
-
-    &--bill {
-      &::before {
-        background-image: url('../img/file.svg');
-      }
-    }
-
-    &--download {
-      &::before {
-        background-image: url('../img/download.svg');
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        fill: transparent;
       }
     }
   }
@@ -85,19 +74,24 @@
   &__all-money {
     font-weight: 600;
     font-size: 40px;
-    line-height: 48px;
+    line-height: 1;
+
+    span {
+      font-size: 25px;
+      font-weight: 400;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 
   &__text {
-    margin-bottom: 8px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1;
     color: var(--color-gray);
   }
 
@@ -107,7 +101,7 @@
     gap: 15px;
     font-weight: 600;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1;
 
     &--green {
       color: var(--color-malachite);

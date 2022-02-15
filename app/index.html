@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>CBS Finance Group</title>
@@ -37,16 +38,18 @@
     </nav> 
     <!-- profile -->
     <div class="profile header__profile"> 
-      <a href="#" class="profile__avatar-link">
+      <a href="#" class="profile__wrapper-avatar">
         <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
       </a>
-      <h2 class="profile__title">
-        <span>ООО Мое предприятие</span>
-        <button class="profile__btn-more">
-          
-        </button>
-      </h2>
-      <a href="#" class="profile__account">Основной счет</a>
+      <div class="profile__text">
+        <h2 class="profile__title">
+          <span>ООО Мое предприятие</span>
+          <button class="profile__btn-more">
+            
+          </button>
+        </h2>
+        <a href="#" class="profile__account">Основной счет</a>
+      </div>
     </div> 
   </div>
 </header>
@@ -60,20 +63,36 @@
         <span class="account-box__text">Основной счет</span>
         <span class="account-box__number">80415 123 400000033871</span>
       </div>
-      <ul class="account-box__list list-reset">
-        <li class="account-box__item">
-          <a href="new-payment.html" class="account-box__link btn-link account-box__link--add">Новый платёж</a>
-        </li>
-        <li class="account-box__item">
-          <a href="#" class="account-box__link btn-link account-box__link--bill">Выставить счет</a>
-        </li>
-        <li class="account-box__item">
-          <a href="#" class="account-box__link btn-link account-box__link--download" download>Загрузить выписку</a>
-        </li>
-      </ul>
+      <div class="account-box__buttons">
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#add"/>
+            </svg>
+          </span>
+          <span>Новый платёж</span>
+          
+        </button>
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#file"/>
+            </svg>
+          </span>
+          Выставить счет
+        </button>
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#download"/>
+            </svg>
+          </span>
+          Загрузить выписку
+        </button>
+      </div>
     </div>
     <div class="account__info info">
-      <span class="info__all-money">1 420 000,00 ₽</span>
+      <span class="info__all-money">1 420 000,<span>00₽</span></span>
       <span class="info__item">
         <span class="info__text">Собственные</span>
         <span class="info__money">896 000,00 ₽</span>
@@ -96,49 +115,35 @@
       <section class="payments-history">
   <div class="container  payments-history__container">
     <div class="payments-history__tabs tabs">
-      <ul class="tabs__list list-reset">
-        <li class="tabs__item">
-          <button class="tabs__btn tabs__btn--active" type="button">Все платежи</button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">Отправлено в банк 
-            <span>(5)</span>
-          </button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">Исполнено  
-            <span>(190)</span>
-          </button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">Черновик 
-            <span>(5)</span>
-          </button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">На подписании
-            <span>(1)</span>
-          </button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">К отправке
-            <span>(7)</span>
-          </button>
-        </li>
-        <li class="tabs__item">
-          <button class="tabs__btn" type="button">Отклонено
-            <span>(2)</span>
-          </button>
-        </li>
-      </ul>
+      <button class="tabs__btn tabs__btn--active" type="button">Все платежи</button>
+      <button class="tabs__btn" type="button">Отправлено в банк 
+        <span>(5)</span>
+      </button>
+      <button class="tabs__btn" type="button">Исполнено  
+        <span>(190)</span>
+      </button>
+      <button class="tabs__btn" type="button">Черновик 
+        <span>(5)</span>
+      </button>
+      <button class="tabs__btn" type="button">На подписании
+        <span>(1)</span>
+      </button>
+      <button class="tabs__btn" type="button">К отправке
+        <span>(7)</span>
+      </button>
+      <button class="tabs__btn" type="button">Отклонено
+        <span>(2)</span>
+      </button>
     </div>
     <form action="#" class="payments-history__form-search form-search">
-      <button class="form-search__btn">
-        <svg>
-          <use xlink:href="img/sprite.svg#search-icon" />
-        </svg>
-      </button>
-      <input type="text" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
+      <label for="form-search__label label" class="form-search__label">
+        <span class="form-search__icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#search-icon" />
+          </svg>
+        </span>
+        <input type="text" id="search-input" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
+      </label>
     </form>
     <div class="history payments-history__item">
       <h2 class="history__title">
@@ -148,12 +153,16 @@
       <ul class=" history__list list-reset">
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="https://loremflickr.com/240/240" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
               <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
@@ -212,19 +221,23 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
               <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
@@ -283,20 +296,23 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="https://loremflickr.com/240/240" alt="avatar" class="history-item__img">
-                
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
               <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
@@ -355,19 +371,23 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
               <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
@@ -426,8 +446,8 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
@@ -441,15 +461,19 @@
       <ul class=" history__list list-reset">
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--red">- 6 000,00 ₽</span>
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>
@@ -505,22 +529,26 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Отправлено в банк</span>
@@ -576,22 +604,26 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="https://via.placeholder.com/100" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--red">- 10 000,00 ₽</span>
+              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
               <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
             </div>
             <span class="history-item__status">Исполнено</span>
@@ -647,19 +679,23 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name">
-              <div class="history-item__avatar-wrapper">
-                <img src="img/history-img.jpg" alt="avatar" class="history-item__img">
+            <div class="history-item__name profile"> 
+              <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
+                <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
+              </a>
+              <div class="profile__text profile__text--big">
+                <a href="#" class="profile__account">Основной счет</a>
+                <h2 class="profile__title">
+                  <span>ООО Мое предприятие</span>
+                </h2>
               </div>
-              <span class="history-item__payment-type">Основной счет</span>
-              <h3 class="history-item__title">ООО «Майкрософт»</h3>
             </div>
             <div class="history-item__money-wrapper">
               <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
@@ -718,8 +754,8 @@
               </div>
             </div>
             <div class="history-item__buttons">
-              <a href="#" class="history-item__payments-btn btn-link">Повторить платёж</a>
-              <a href="#" class="history-item__payments-btn btn-link">Отозвать платеж</a>
+              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
@@ -727,7 +763,7 @@
     </div>
   </div>
   <script>
-    document.querySelectorAll('.history-item__img')
+    document.querySelectorAll('.profile__avatar')
     .forEach(img => img.src = `https://loremflickr.com/240/240?lock=${Math.ceil(Math.random() * 1000)}`);
   </script>
 </section>

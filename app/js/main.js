@@ -36,26 +36,28 @@ historyitemBtn.forEach(function (btn) {
 
 var dateInput = document.querySelectorAll('.field-date__date');
 dateInput.forEach(function (el) {
+  var textDateEl = el.parentNode.querySelector('.field-date__text');
   el.addEventListener('change', function () {
     var val = new Date(el.value).toLocaleString('ru-Ru', {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
     }).replace('г.', '');
-    el.previousElementSibling.textContent = val;
+    textDateEl.textContent = val;
   });
 });
 "use strict";
 
 var selectEl = document.querySelectorAll('.select');
 
-var addItem = function addItem(select, input, item) {
+var addItem = function addItem(select, input, item, placeholder) {
   if (select.querySelector('.select__item')) {
     select.querySelector('.select__item').remove();
   }
 
-  select.insertAdjacentElement('beforeend', item); // input.value = item.dataset.id;
-
+  select.insertAdjacentElement('beforeend', item);
+  placeholder.style.fontSize = 14 + 'px';
+  placeholder.style.marginBottom = 5 + 'px';
   input.value = item.dataset.value;
 };
 
@@ -72,6 +74,8 @@ selectEl.forEach(function (select) {
   var selectInput = select.querySelector('input');
   var selectInner = select.querySelector('.select__inner');
   var selectList = select.querySelector('.select__list');
+  var listItem = selectList.querySelectorAll('.select__item');
+  var placeholder = selectInner.querySelector('.select__placeholder');
   selectBtn.addEventListener('click', function () {
     if (select.classList.contains('open')) {
       selectClose(select);
@@ -87,9 +91,17 @@ selectEl.forEach(function (select) {
 
       if (target.closest('.select__list')) {
         var item = target.closest('.select__item');
-        addItem(selectInner, selectInput, item.cloneNode(true));
+        addItem(selectInner, selectInput, item.cloneNode(true), placeholder);
         selectClose(select);
       }
+    });
+    listItem.forEach(function (item) {
+      item.addEventListener('focus', function () {
+        selectOpen(select);
+      });
+      item.addEventListener('blur', function () {
+        selectClose(select);
+      });
     });
   });
 });
@@ -125,6 +137,11 @@ var tooltipClose = function tooltipClose(tooltip) {
 };
 
 tooltipsBtns.forEach(function (btn) {
+  btn.addEventListener('mouseenter', function () {
+    setTimeout(function () {
+      tooltipOpen(btn);
+    }, 210);
+  });
   btn.addEventListener('mouseleave', function () {
     tooltipClose(btn);
   });

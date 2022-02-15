@@ -6,28 +6,30 @@
         <h2 class="form__title">Новый платёж
           <span>247123</span>
         </h2>
-        <label class="form__label field-date">
-          <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
-          <button type="button" class="field-date__btn">
+        <div class="field-date">
+          <label class="form__label label">
+            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+            <span class="field-date__text"></span>
+            <button type="button" class="field-date__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#date-icon" />
               </svg>
-          </button>
-          <span class="field-date__text"></span>
-          <input type="date" class="field-date__date">
-          <span></span>
-        </label>
-        <label class="form__label field-date">
-          <span class="form__placeholder field-date__placeholder"> Дата исполнения платежа </span>
-          <button type="button" class="field-date__btn">
+            </button>
+          </label>
+          <input type="date" class="field-date__date" name="">
+        </div>
+        <div class="field-date">
+          <label class="form__label label">
+            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+            <span class="field-date__text"></span>
+            <button type="button" class="field-date__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#date-icon" />
               </svg>
-          </button>
-          <span class="field-date__text"></span>
-          <input type="date" class="field-date__date">
-          <span></span>
-        </label>
+            </button>
+          </label>
+          <input type="date" class="field-date__date" name="">
+        </div>
         <div class="form__select select">
           <input type="hidden" name="select" value="">
           <div class="select__inner">
@@ -127,7 +129,7 @@
             <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽">
             <span class="label__text">Сумма</span>
           </div>
-          <div class="label__input-wrapper label__input-wrapper--line">
+          <div class="label__input-wrapper label__input-wrapper--padding">
             <input class="label__input" type="text" placeholder=" " name="" value="0,00 ₽" disabled>
             <span class="label__text">Комиссия</span>
           </div>
@@ -198,10 +200,13 @@
         </label>
       </div>
       <div class="form__wrapper">
-        <label class="label form__label-checkbox form__label--max-width">
-          <input class="label__checkbox visually-hidden" type="checkbox" name="" value="">
-          <span class="label__checkbox-text">Уведомить контрагента</span>
-        </label>
+        <div class="checkbox form__label--max-width">
+          <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="" value="">
+          <label class="checkbox__label" for="checkbox">
+            Уведомить контрагента
+          </label>
+        </div>
+        
       </div>
       <div class="form__buttons">
         <button class="form__button form__button--primary btn-link">Подписать и отправить</button>

@@ -1,17 +1,29 @@
 .form-search {
-  @include flex-v-center;
 
-  position: relative;
+  &__label {
+    @include flex-v-center;
+    gap: 10px;
+    padding: 16px 20px;
+    background-color: var(--color-black);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);;
+    }
   
+    &:focus-within {
+      border-color: var(--color-sundance);
+    }
 
-  &__btn {
-    position: absolute;
-    left: 16px;
-    margin-right: 10px;
-    color: #999;
+  }
+  
+  &__icon {
     width: 24px;
     height: 24px;
-    
+
+
     svg {
       width: 100%;
       height: 100%;
@@ -20,15 +32,12 @@
   }
 
   &__input {
-    padding: 16px 20px 16px 51px;
     width: 100%;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    background-color: var(--color-black);
-    border: 1px solid transparent;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    background-color: transparent;
+    border: none;
     color: var(--color-gray);
     outline: none;
 
@@ -39,12 +48,9 @@
       color: var(--color-gray);
     }
 
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.7);;
-    }
-  
-    &:focus {
-      border-color: var(--color-sundance);
+    &::selection {
+      background-color: var(--color-gray);
+      color: var(--color-light);
     }
       
   }

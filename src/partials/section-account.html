@@ -6,20 +6,36 @@
         <span class="account-box__text">Основной счет</span>
         <span class="account-box__number">80415 123 400000033871</span>
       </div>
-      <ul class="account-box__list list-reset">
-        <li class="account-box__item">
-          <a href="new-payment.html" class="account-box__link btn-link account-box__link--add">Новый платёж</a>
-        </li>
-        <li class="account-box__item">
-          <a href="#" class="account-box__link btn-link account-box__link--bill">Выставить счет</a>
-        </li>
-        <li class="account-box__item">
-          <a href="#" class="account-box__link btn-link account-box__link--download" download>Загрузить выписку</a>
-        </li>
-      </ul>
+      <div class="account-box__buttons">
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#add"/>
+            </svg>
+          </span>
+          <span>Новый платёж</span>
+          
+        </button>
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#file"/>
+            </svg>
+          </span>
+          Выставить счет
+        </button>
+        <button class="account-box__btn btn-link">
+          <span class="account-box__btn-icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#download"/>
+            </svg>
+          </span>
+          Загрузить выписку
+        </button>
+      </div>
     </div>
     <div class="account__info info">
-      <span class="info__all-money">1 420 000,00 ₽</span>
+      <span class="info__all-money">1 420 000,<span>00₽</span></span>
       <span class="info__item">
         <span class="info__text">Собственные</span>
         <span class="info__money">896 000,00 ₽</span>
