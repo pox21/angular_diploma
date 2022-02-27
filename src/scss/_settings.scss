@@ -9,10 +9,14 @@ html {
   box-sizing: inherit;
 }
 
+*:disabled {
+  cursor: not-allowed;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   background-color: var(--color-vulcan-bg);
   color: var(--color-light);
   min-height: 100vh;
@@ -90,28 +94,7 @@ button {
   clip: rect(0 0 0 0);
 }
 
-.btn-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 17px 25px;
-  font-weight: 600;
-  font-size: 18px;
-  border: 1px solid #999999;
-  border-radius: 10px;
-  transition: background-color 0.3s ease-in-out;
 
-  &:hover {
-    background-color: #999999;
-  }
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  &:active {
-    background-color: transparent;
-  }
-}
 
 .arrow-btn {
   width: 24px;
@@ -134,85 +117,3 @@ button {
 }
 
 
-.checkbox {
-  position: relative;
-
-  &:focus-within {
-    border-color: transparent !important;
-  }
-  
-  &__label {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--color-gray);
-    cursor: pointer;
-
-    &::before, &::after {
-      content: '';
-      display: block;
-      width: 18px;
-      height: 18px;
-    }
-
-    &::before {
-      border-radius: 5px;
-      border: 1px solid #999999;
-      margin-right: 15px;
-    }
-
-    &::after {
-      position: absolute;
-      left: 0;
-      // background-image: url('../img/check.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 10px;
-    }
-  }
-
-  &__input {
-    outline: none;
-
-    &:focus + .checkbox__label {
-      outline: 1px solid var(--color-sundance);
-    }
-
-    &:checked + .checkbox__label::after {
-      background-image: url('../img/check.svg');
-    }
-  }
-}
-
-.tooltip {
-  position: relative;
-  display: block;
-  width: 290px;
-  background-color: var(--color-black);
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: var(--color-light);
-  font-family: 'Graphik';
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  z-index: -1;
-  text-align: start;
-  user-select: text;
-
-  &::after {
-    content: '';
-    top: -20%;
-    right: 20px;
-    transform: rotate(45deg);
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: inherit;
-  }
-}

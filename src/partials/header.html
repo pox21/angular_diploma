@@ -4,34 +4,31 @@
       <picture>
         <source srcset="img/logo.svg" media="(min-width: 800px)">
         <img src="img/logo-min.svg" alt="CBS logo">
-       </picture>       
+       </picture>
       <!-- <img src="img/logo.svg" alt="CBS Finance Group logo"> -->
     </a>
     <!-- navigation -->
     <nav class="nav header__nav">
-      <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Платежи</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Выписки</a>
-        </li>
-      </ul>
-    </nav> 
+      <a href="#" class="nav__link fs-txt">Платежи</a>
+      <a href="#" class="nav__link fs-txt">Выписки</a>
+    </nav>
     <!-- profile -->
-    <div class="profile header__profile"> 
-      <a href="#" class="profile__wrapper-avatar">
+    <div class="profile header__profile">
+      <div class="profile__wrapper-avatar">
         <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
-      </a>
-      <div class="profile__text">
-        <h2 class="profile__title">
-          <span>ООО Мое предприятие</span>
-          <button class="profile__btn-more">
-            
-          </button>
-        </h2>
-        <a href="#" class="profile__account">Основной счет</a>
       </div>
-    </div> 
+      <div class="profile__text">
+        <div class="profile__header">
+          <h2 class="profile__title fs-txt">
+            ООО Мое предприятие
+          </h2>
+          <button class="profile__btn-more">
+
+          </button>
+        </div>
+
+        <span class="profile__account fs-extra-small">Основной счет</span>
+      </div>
+    </div>
   </div>
 </header>

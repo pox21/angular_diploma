@@ -26,26 +26,22 @@
   }
 
   &__text {
-    display: flex;
+    @include flex-h-center;
     flex-direction: column;
-    justify-content: center;
     gap: 4px;
 
     &--big {
-      gap: 9px;
+      gap: 16px;
     }
   }
 
-  &__title {
+  &__header {
     @include flex-v-center;
-    margin: 0;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    gap: 4px;
+  }
 
-    span {
-      margin-right: 4px;
-    }
+  &__title {
+    margin: 0;
   }
 
   &__btn-more {
@@ -57,9 +53,6 @@
   }
 
   &__account {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
     color: var(--color-gray);
   }
 }

@@ -43,9 +43,10 @@ dateInput.forEach(function (el) {
       month: 'long',
       year: 'numeric'
     }).replace('г.', '');
+    console.log(placeholder.nextElementSibling);
 
-    if (!placeholder.nextElementSibling.classList.contains('field-date__text')) {
-      placeholder.insertAdjacentHTML('afterend', "<span class=\"field-date__text\">".concat(val, "</span>"));
+    if (!placeholder.nextElementSibling) {
+      placeholder.insertAdjacentHTML('afterend', "<span class=\"field-date__text fs-small\">".concat(val, "</span>"));
     } else {
       placeholder.nextElementSibling.textContent = val;
     }
@@ -129,7 +130,9 @@ var slider = new Swiper('.auth-slider', {
 });
 "use strict";
 
-var tooltipsBtns = document.querySelectorAll('.label__icon');
+// const tooltipsBtns = document.querySelectorAll('.label__icon'); 
+var tooltipsBtns = document.querySelectorAll('[data-tooltip]');
+console.log(tooltipsBtns);
 
 var tooltipOpen = function tooltipOpen(tooltip) {
   tooltip.classList.add('active');

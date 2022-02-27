@@ -22,153 +22,163 @@
       <picture>
         <source srcset="img/logo.svg" media="(min-width: 800px)">
         <img src="img/logo-min.svg" alt="CBS logo">
-       </picture>       
+       </picture>
       <!-- <img src="img/logo.svg" alt="CBS Finance Group logo"> -->
     </a>
     <!-- navigation -->
     <nav class="nav header__nav">
-      <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Платежи</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Выписки</a>
-        </li>
-      </ul>
-    </nav> 
+      <a href="#" class="nav__link fs-txt">Платежи</a>
+      <a href="#" class="nav__link fs-txt">Выписки</a>
+    </nav>
     <!-- profile -->
-    <div class="profile header__profile"> 
-      <a href="#" class="profile__wrapper-avatar">
+    <div class="profile header__profile">
+      <div class="profile__wrapper-avatar">
         <img src="img/avatar.jpg" alt="Ava" class="profile__avatar">
-      </a>
-      <div class="profile__text">
-        <h2 class="profile__title">
-          <span>ООО Мое предприятие</span>
-          <button class="profile__btn-more">
-            
-          </button>
-        </h2>
-        <a href="#" class="profile__account">Основной счет</a>
       </div>
-    </div> 
+      <div class="profile__text">
+        <div class="profile__header">
+          <h2 class="profile__title fs-txt">
+            ООО Мое предприятие
+          </h2>
+          <button class="profile__btn-more">
+
+          </button>
+        </div>
+
+        <span class="profile__account fs-extra-small">Основной счет</span>
+      </div>
+    </div>
   </div>
 </header>
 
     <main class="main">
       <section class="account">
   <h1 class="account-title visually-hidden">Основной счет</h1>
+
   <div class="container account__container">
     <div class="account__account-box account-box">
       <div class="account-box__wrapper">
-        <span class="account-box__text">Основной счет</span>
-        <span class="account-box__number">80415 123 400000033871</span>
+        <span class="account-box__text fs-extra-small">Основной счет</span>
+        <span class="account-box__number fs-txt">80415 123 400000033871</span>
       </div>
       <div class="account-box__buttons">
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#add"/>
             </svg>
           </span>
           <span>Новый платёж</span>
-          
         </button>
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#file"/>
             </svg>
           </span>
           Выставить счет
         </button>
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#download"/>
             </svg>
           </span>
           Загрузить выписку
         </button>
+
       </div>
     </div>
     <div class="account__info info">
-      <span class="info__all-money">1 420 000,<span>00₽</span></span>
+      <span class="info__all-money fs-h1">1 420 000,<span>00₽</span></span>
       <span class="info__item">
-        <span class="info__text">Собственные</span>
-        <span class="info__money">896 000,00 ₽</span>
+        <span class="info__text fs-extra-small">Собственные</span>
+        <span class="info__money fs-small">
+          896 000,00 ₽
+        </span>
       </span>
       <span class="info__item">
-        <span class="info__text">Заёмные</span>
-        <span class="info__money">123 000,00 ₽</span>
+        <span class="info__text fs-extra-small">Заёмные</span>
+        <span class="info__money fs-small">
+          123 000,00 ₽
+        </span>
       </span>
       <span class="info__item">
-        <span class="info__text">Движения средств за месяц</span>
-        <span class="info__money">
+        <span class="info__text fs-extra-small">Движения средств за месяц</span>
+        <span class="info__money fs-small">
           <span class="info__money--green">+53 000,00 ₽</span>
-        <span class="info__money--red">-13 000,00 ₽</span>
+          <span class="info__money--red">-13 000,00 ₽</span>
         </span>
       </span>
     </div>
-    
+
   </div>
 </section>
+
       <section class="payments-history">
   <div class="container  payments-history__container">
     <div class="payments-history__tabs tabs">
-      <button class="tabs__btn tabs__btn--active" type="button">Все платежи</button>
-      <button class="tabs__btn" type="button">Отправлено в банк 
+      <button class="tabs__btn btn-tab btn-tab--active" type="button">Все платежи</button>
+      <button class="tabs__btn btn-tab" type="button">Отправлено в банк
         <span>(5)</span>
       </button>
-      <button class="tabs__btn" type="button">Исполнено  
+      <button class="tabs__btn btn-tab" type="button">Исполнено
         <span>(190)</span>
       </button>
-      <button class="tabs__btn" type="button">Черновик 
+      <button class="tabs__btn btn-tab" type="button">Черновик
         <span>(5)</span>
       </button>
-      <button class="tabs__btn" type="button">На подписании
+      <button class="tabs__btn btn-tab" type="button">На подписании
         <span>(1)</span>
       </button>
-      <button class="tabs__btn" type="button">К отправке
+      <button class="tabs__btn btn-tab" type="button">К отправке
         <span>(7)</span>
       </button>
-      <button class="tabs__btn" type="button">Отклонено
+      <button class="tabs__btn btn-tab" type="button">Отклонено
         <span>(2)</span>
       </button>
     </div>
     <form action="#" class="payments-history__form-search form-search">
-      <label for="search-input" class="form-search__label">
-        <span class="form-search__icon">
+      <div class="form-control form-control--bgc-black form-control--padding ">
+        <span class="form-control__icon">
           <svg>
-            <use xlink:href="img/sprite.svg#search-icon" />
+            <use xlink:href="img/sprite.svg#search-icon"></use>
           </svg>
         </span>
-        <input type="text" id="search-input" class="form-search__input" placeholder="Поиск по контрагенту и ИНН">
-      </label>
+        <input class="form-control__input" id="search-input" type="text" placeholder="Поиск по контрагенту и ИНН" name="name">
+        <label class="form-control__label" for="search-input"></label>
+      </div>
     </form>
     <div class="history payments-history__item">
-      <h2 class="history__title">
-        11 Ноября
-        <span>Сегодня</span>
-      </h2>
+      <div class="history__title-wrapper">
+        <h2 class="history__title fs-h2">
+          11 Ноября
+        </h2>
+        <span class="history__subtitle fs-txt">Сегодня</span>
+      </div>
+
       <ul class=" history__list list-reset">
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Исполнено</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Исполнено</span>
             <button class="history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -178,72 +188,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--red">- 8 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Отправлено в банк</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Отправлено в банк</span>
             <button class="history-item__btn history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -253,72 +263,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Исполнено</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Исполнено</span>
             <button class="history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -328,72 +338,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Отправлено в банк</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Отправлено в банк</span>
             <button class="history-item__btn history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -403,80 +413,82 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
       </ul>
     </div>
     <div class="history payments-history__item">
-      <h2 class="history__title">
-        10 Ноября
-        <span>Вчера</span>
-      </h2>
+      <div class="history__title-wrapper">
+        <h2 class="history__title fs-h2">
+          10 Ноября
+        </h2>
+        <span class="history__subtitle fs-txt">Вчера</span>
+      </div>
       <ul class=" history__list list-reset">
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Исполнено</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Исполнено</span>
             <button class="history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -486,72 +498,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--red">- 8 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--red">- 8 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Отправлено в банк</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Отправлено в банк</span>
             <button class="history-item__btn history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -561,72 +573,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class="history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="https://loremflickr.com/240/240" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Исполнено</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Исполнено</span>
             <button class="history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -636,72 +648,72 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>
         <li class=" history__item history-item">
           <div class="history-item__wrapper">
-            <div class="history-item__name profile"> 
+            <div class="history-item__name profile">
               <a href="#" class="profile__wrapper-avatar profile__wrapper-avatar--big">
                 <img src="img/history-img.jpg" alt="Ava" class="profile__avatar">
               </a>
               <div class="profile__text profile__text--big">
-                <a href="#" class="profile__account">Основной счет</a>
-                <h2 class="profile__title">
-                  <span>ООО Мое предприятие</span>
+                <span class="profile__account fs-extra-small">Основной счет</span>
+                <h2 class="profile__title fs-txt">
+                  ООО Мое предприятие
                 </h2>
               </div>
             </div>
             <div class="history-item__money-wrapper">
-              <span class="history-item__money history-item__money--green">+ 16 000,00 ₽</span>
-              <span class="history-item__info">Платеж по договору № 10/1-Л-73</span>
+              <span class="history-item__money fs-small history-item__money--green">+ 16 000,00 ₽</span>
+              <span class="history-item__info fs-extra-small">Платеж по договору № 10/1-Л-73</span>
             </div>
-            <span class="history-item__status">Отправлено в банк</span>
+            <span class="history-item__status btn-tab btn-tab--bg-black"">Отправлено в банк</span>
             <button class="history-item__btn history-item__btn">
               <svg>
                 <use xlink:href="img/sprite.svg#arrow-down" />
@@ -711,51 +723,51 @@
           <div class="history-item__more-wrapper">
             <div class="history-item__cards">
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
               <div class="history-item__card history-card">
-                <span class="history-card__name">ООО «Предприятие»</span>
-                <span class="history-card__bank">ПАО Росбанк</span>
+                <span class="history-card__title fs-txt">ООО «Предприятие»</span>
+                <span class="history-card__title fs-txt">ПАО Росбанк</span>
                 <div class="history-card__border"></div>
                 <div class="history-card__info">
-                  <span class="history-card__text">Основной счет</span>
-                  <span class="history-card__num">80415 123 400000033871</span>
+                  <span class="history-card__text fs-extra-small">Основной счет</span>
+                  <span class="history-card__num fs-txt">80415 123 400000033871</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">БИК</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">БИК</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">ИНН</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">ИНН</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
                 <div class="history-card__info">
-                  <span class="history-card__text">КПП</span>
-                  <span class="history-card__num">56787654567</span>
+                  <span class="history-card__text fs-extra-small">КПП</span>
+                  <span class="history-card__num fs-txt">56787654567</span>
                 </div>
               </div>
             </div>
             <div class="history-item__buttons">
-              <button class="history-item__payments-btn btn-link" type="button">Повторить платёж</button>
-              <button class="history-item__payments-btn btn-link" type="button">Отозвать платеж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Повторить платёж</button>
+              <button class="history-item__payments-btn btn btn--secondary" type="button">Отозвать платеж</button>
             </div>
           </div>
         </li>

@@ -1,5 +1,5 @@
 .account {
-  
+
   &__container {
     padding-bottom: var(--grid-gap);
   }
@@ -17,16 +17,10 @@
 
   &__text {
     margin-bottom: 8px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
     color: var(--color-gray);
   }
 
   &__number {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
     color: var(--color-light);
   }
 
@@ -42,39 +36,18 @@
     flex-wrap: wrap;
   }
 
-  &__btn {
-    gap: 10px;
-    padding: 15px 32px;
-
-    &-icon {
-      display: block;
-      width: 24px;
-      height: 24px;
-      color: var(--color-gray); 
-
-      svg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        fill: transparent;
-      }
-    }
-  }
 }
 
 .info {
   @include flex-all-sb;
   flex-wrap: wrap;
   gap: var(--grid-gap);
-  
+
   padding: 60px 40px;
   background-color: var(--color-ebony-clay);
   border-radius: 10px;
 
   &__all-money {
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 1;
 
     span {
       font-size: 25px;
@@ -89,9 +62,6 @@
   }
 
   &__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
     color: var(--color-gray);
   }
 
@@ -99,9 +69,6 @@
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1;
 
     &--green {
       color: var(--color-malachite);
@@ -131,5 +98,5 @@
       font-size: 14px;
     }
   }
-  
+
 }

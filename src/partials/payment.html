@@ -3,32 +3,33 @@
 
     <form action="#" class="form-payment form">
       <div class="form__wrapper">
-        <h2 class="form__title">Новый платёж
-          <span>247123</span>
-        </h2>
-        <div class="field-date">
-          <input type="date" class="field-date__date" name="date-name1">
-          <label class="form__label label">
-            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
-            <!-- <span class="field-date__text"></span> -->
-            <button type="button" class="field-date__btn">
-              <svg>
-                <use xlink:href="img/sprite.svg#date-icon" />
-              </svg>
-            </button>
-          </label>
+        <div class="form__title-wrapper">
+          <h1 class="form__title fs-h1">
+            Новый платёж
+          </h1>
+          <span class="form__subtitle fs-txt">247123</span>
         </div>
-        <div class="field-date">
-          <input type="date" class="field-date__date" name="date-name2">
-          <label class="form__label label">
+        <div class="field-date form-control form-control--bgc-ebony-clay form-control--min-height">
+          <input type="date" class="field-date__date" name="date-name1" id="date1">
+          <label class="field-date__label" for="date1">
             <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
-            <!-- <span class="field-date__text"></span> -->
-            <button type="button" class="field-date__btn">
-              <svg>
-                <use xlink:href="img/sprite.svg#date-icon" />
-              </svg>
-            </button>
           </label>
+          <button type="button" class="field-date__btn">
+            <svg>
+              <use xlink:href="img/sprite.svg#date-icon" />
+            </svg>
+          </button>
+        </div>
+        <div class="field-date form-control form-control--bgc-ebony-clay form-control--min-height">
+          <input type="date" class="field-date__date" name="date-name2" id="date2">
+          <label class="field-date__label" for="date2">
+            <span class="form__placeholder field-date__placeholder"> Дата платежа в документе </span>
+          </label>
+          <button type="button" class="field-date__btn">
+            <svg>
+              <use xlink:href="img/sprite.svg#date-icon" />
+            </svg>
+          </button>
         </div>
         <div class="form__select select">
           <input type="hidden" name="select" value="">
@@ -41,15 +42,15 @@
             </button>
           </div>
           <div class="select__list">
-            <div class="select__item" tabindex="0" data-id="1" data-value="Основной счет">
+            <div class="select__item fs-small" tabindex="0" data-id="1" data-value="Основной счет">
               <span class="select__text">Основной счет</span>
               <span class="select__value">1 420 000,00 ₽</span>
             </div>
-            <div class="select__item" tabindex="0" data-id="2" data-value="Второй счёт">
+            <div class="select__item fs-small" tabindex="0" data-id="2" data-value="Второй счёт">
               <span class="select__text">Второй счёт</span>
               <span class="select__value">67 000,00 ₽</span>
             </div>
-            <div class="select__item" tabindex="0" data-id="3" data-value="Сберегательный счёт">
+            <div class="select__item fs-small" tabindex="0" data-id="3" data-value="Сберегательный счёт">
               <span class="select__text">Сберегательный счёт</span>
               <span class="select__value">150 000,00 ₽</span>
             </div>
@@ -57,83 +58,97 @@
         </div>
       </div>
       <div class="form__wrapper">
-        <h2 class="form__title">
-          Реквизиты контрагента
-        </h2>
-        <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="name" value="80415 123 400000033871">
-          <span class="label__text">Счет получателя</span>
-        </label>
-        <label class="form__label label">
-          <input class="label__input" type="text" placeholder=" " name="inn" value="">
-          <span class="label__text">ИНН</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
-            <svg class="icon">
-              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
-            </svg>
-            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </span>
-        </label>
-        <label class="form__label label">
-          <input class="label__input" type="text" placeholder=" " name="kpp" value="">
-          <span class="label__text">КПП</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
-            <svg class="icon">
-              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
-            </svg>
-            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </span>
-        </label>
-        <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="recipient" value="">
-          <span class="label__text">Наименование получателя</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
-            <svg class="icon">
-              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
-            </svg>
-            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </span>
-        </label>
-      </div>
-      <div class="form__wrapper">
-        <h2 class="form__title">
-          Реквизиты контрагента
-        </h2>
-        <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="bank" value="">
-          <span class="label__text">Реквизиты банка получателя</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
-            <svg class="icon">
-              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
-            </svg>
-            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </span>
-        </label>
-        <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="beneficiary" value="">
-          <span class="label__text">Корреспондентский счет получателя</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
-            <svg class="icon">
-              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
-            </svg>
-            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
-          </span>
-        </label>
-      </div>
-      <div class="form__wrapper">
-        <h2 class="form__title">
-          Сумма платежа
-        </h2>
-        <div class="form__label label form__label--max-width form__label--flex">
-          <label class="label__input-wrapper">
-            <input class="label__input" type="text" placeholder=" " name="sum" value="0,00 ₽">
-            <span class="label__text">Сумма</span>
-          </label>
-          <label class="label__input-wrapper label__input-wrapper--padding">
-            <input class="label__input" type="text" placeholder=" " name="commission" value="0,00 ₽" disabled>
-            <span class="label__text">Комиссия</span>
-          </label>
+        <div class="form__title-wrapper">
+          <h2 class="form__title fs-h2">
+            Реквизиты контрагента
+          </h2>
         </div>
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <input class="form-control__input" id="labelInput1" type="text" placeholder=" " name="name" value="80415 123 400000033871">
+          <label class="form-control__label" for="labelInput1">Счет получателя</label>
+        </div>
+
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
+            <svg class="icon">
+              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
+          </span>
+          <input class="form-control__input" id="labelInput2" type="text" placeholder=" " name="inn" value="">
+          <label class="form-control__label" for="labelInput2">ИНН</label>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height ">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
+            <svg class="icon">
+              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
+          </span>
+          <input class="form-control__input" id="labelInput3" type="text" placeholder=" " name="kpp" value="">
+          <label class="form-control__label" for="labelInput3">КПП</label>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
+            <svg class="icon">
+              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
+          </span>
+          <input class="form-control__input" id="labelInput4" type="text" placeholder=" " name="recipient" value="">
+          <label class="form-control__label" for="labelInput4">Наименование получателя</label>
+        </div>
+
+      </div>
+      <div class="form__wrapper">
+        <div class="form__title-wrapper">
+          <h2 class="form__title fs-h2">
+            Реквизиты контрагента
+          </h2>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
+            <svg class="icon">
+              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
+          </span>
+          <input class="form-control__input" id="labelInput5" type="text" placeholder=" " name="bank" value="">
+          <label class="form-control__label" for="labelInput5">Реквизиты банка получателя</label>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
+            <svg class="icon">
+              <use class="icon" xlink:href="img/sprite.svg#info-icon" />
+            </svg>
+            <span class="tooltip">Текст подсказки по ховеру на иконку</span>
+          </span>
+          <input class="form-control__input" id="labelInput6" type="text" placeholder=" " name="beneficiary" value="">
+          <label class="form-control__label" for="labelInput6">Корреспондентский счет получателя</label>
+        </div>
+
+      </div>
+      <div class="form__wrapper">
+        <div class="form__title-wrapper">
+          <h2 class="form__title fs-h2">
+            Сумма платежа
+          </h2>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <input class="form-control__input" id="labelInput7" type="text" placeholder=" " name="beneficiary" value="0,00 ₽">
+          <label class="form-control__label" for="labelInput7">Сумма</label>
+          <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height">
+            <input class="form-control__input" id="labelInput8" type="text" placeholder=" " name="commission" value="0,00 ₽" disabled>
+            <label class="form-control__label" for="labelInput8">Комиссия</label>
+          </div>
+        </div>
+
         <div class="form__select select">
           <input type="hidden" name="select2" value="">
           <div class="select__inner">
@@ -145,16 +160,13 @@
             </button>
           </div>
           <div class="select__list">
-            <div class="select__item" tabindex="0" data-id="1" data-value="Налог на добавленную 1">
-              <!-- <span class="select__text">Основной счет</span> -->
+            <div class="select__item fs-small" tabindex="0" data-id="1" data-value="Налог на добавленную 1">
               <span class="select__value">Налог на добавленную стоимость 1</span>
             </div>
-            <div class="select__item" tabindex="0" data-id="2" data-value="Налог на добавленную 2">
-              <!-- <span class="select__text">Второй счёт</span> -->
+            <div class="select__item fs-small" tabindex="0" data-id="2" data-value="Налог на добавленную 2">
               <span class="select__value">Налог на добавленную стоимость 2</span>
             </div>
-            <div class="select__item" tabindex="0" data-id="3" data-value="Налог на добавленную 3">
-              <!-- <span class="select__text">Сберегательный счёт</span> -->
+            <div class="select__item fs-small" tabindex="0" data-id="3" data-value="Налог на добавленную 3">
               <span class="select__value">Налог на добавленную стоимость 3</span>
             </div>
           </div>
@@ -162,55 +174,48 @@
       </div>
       <div class="form__tabs form-tabs">
         <div class="form-tabs__inner">
-          <span class="form-tabs__text form-tabs__text--gray">Очередность платежа</span>
-          <span class="form-tabs__text">Прочие платежи</span>
+          <span class="form-tabs__text form-tabs__text--gray fs-extra-small">Очередность платежа</span>
+          <span class="form-tabs__text fs-small">Прочие платежи</span>
         </div>
-        <ul class="form-tabs__items list-reset">
-          <li class="form-tabs__item">
-            <button type="button" class="form-tabs__btn form-tabs__btn--active">1</button>
-          </li>
-          <li class="form-tabs__item">
-            <button type="button" class="form-tabs__btn">2</button>
-          </li>
-          <li class="form-tabs__item">
-            <button type="button" class="form-tabs__btn">3</button>
-          </li>
-          <li class="form-tabs__item">
-            <button type="button" class="form-tabs__btn">4</button>
-          </li>
-          <li class="form-tabs__item">
-            <button type="button" class="form-tabs__btn">5</button>
-          </li>
-        </ul>
+        <div class="form-tabs__items">
+          <button type="button" class="form-tabs__btn fs-extra-small form-tabs__btn--active">1</button>
+          <button type="button" class="form-tabs__btn fs-extra-small">2</button>
+          <button type="button" class="form-tabs__btn fs-extra-small">3</button>
+          <button type="button" class="form-tabs__btn fs-extra-small">4</button>
+          <button type="button" class="form-tabs__btn fs-extra-small">5</button>
+        </div>
       </div>
       <div class="form__wrapper">
-        <label class="form__label label form__label--max-width">
-          <input class="label__input" type="text" placeholder=" " name="uin" value="">
-          <span class="label__text">Код УИН/УИП</span>
-          <span tabindex="0" class="label__icon" data-tooltip="Текст подсказки по ховеру на иконку">
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--col-2">
+          <span tabindex="0" data-tooltip="" class="form-control__icon form-control__icon--right form-control__icon--color">
             <svg class="icon">
               <use class="icon" xlink:href="img/sprite.svg#info-icon" />
             </svg>
             <span class="tooltip">Текст подсказки по ховеру на иконку</span>
           </span>
-        </label>
-        <label class="form__label label form__label--max-width form__label--height">
-          <textarea class="label__input label__input--textarea" placeholder=" " name="purpose" ></textarea>
-          <span class="label__text label__text--textarea">Назначение платежа</span>
-        </label>
+          <input class="form-control__input" id="labelInput9" type="text" placeholder=" " name="uin" value="">
+          <label class="form-control__label" for="labelInput9">Код УИН/УИП</label>
+        </div>
+
+        <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height--textarea form-control--col-2">
+          <textarea class="form-control__input form-control__input--textarea" id="textarea" type="text" placeholder=" " name="uin" value=""></textarea>
+          <label class="form-control__label form-control__label--textarea" for="textarea">Назначение платежа</label>
+        </div>
+
       </div>
       <div class="form__wrapper">
-        <div class="checkbox form__label--max-width">
+        <div class="checkbox">
           <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="checkbox" value="">
           <label class="checkbox__label" for="checkbox">
             Уведомить контрагента
           </label>
         </div>
-        
+
       </div>
       <div class="form__buttons">
-        <button class="form__button form__button--primary btn-link">Подписать и отправить</button>
-        <button class="form__button btn-link">Сохранить как черновик</button>
+        <button class="form__button btn btn--primary ">Подписать и отправить</button>
+        <button class="form__button btn btn--secondary">Сохранить как черновик</button>
       </div>
     </form>
 

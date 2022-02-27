@@ -10,9 +10,23 @@
   --color-light: #fff;
   --color-gray: #bbbbbb;
 
+  //
+  --border-gray: #999;
+
+  //
+  --disabled-color: #46495C;
+  
   // 
   --grid-gap: 32px;
 
   // media 
   --tablet-media: 768px;
+
+  // fonts 
+
+  --fs-h1: 40px;
+  --fs-h2: 30px;
+  --fs-txt: 18px;
+  --fs-small: 16px;
+  --fs-extra-small: 14px;
 }

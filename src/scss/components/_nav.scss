@@ -1,9 +1,6 @@
 .nav {
-
-  &__list {
-    @include flex-v-center;
-    gap: var(--grid-gap);
-  }
+  @include flex-v-center;
+  gap: var(--grid-gap);
 
   &__link {
     position: relative;

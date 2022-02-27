@@ -1,4 +1,6 @@
-const tooltipsBtns = document.querySelectorAll('.label__icon'); 
+// const tooltipsBtns = document.querySelectorAll('.label__icon'); 
+const tooltipsBtns = document.querySelectorAll('[data-tooltip]'); 
+console.log(tooltipsBtns)
 
 const tooltipOpen = (tooltip) => {
   tooltip.classList.add('active');

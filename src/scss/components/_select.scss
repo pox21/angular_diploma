@@ -23,8 +23,7 @@
 
   &__placeholder {
     color: #bbb;
-    font-weight: 400;
-    font-size: 16px;
+    font-size: var(--fs-small);
     line-height: 1;
   }
 
@@ -48,13 +47,6 @@
     color: var(--color-gray);
   }
 
-  &__item {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    
-  }
-
   &__list {
     position: absolute;
     width: 100%;
@@ -71,7 +63,7 @@
       display: flex;
       gap: 5px;
       padding: 20px 20px;
-      
+
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;

@@ -3,18 +3,21 @@
   user-select: none;
   cursor: pointer;
 
-  & .label {
+  &__label {
+    display: flex;
+    flex-direction: column;
     gap: 6px;
   }
 
   &__placeholder {
+    margin: auto 0;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: var(--fs-small);
+    line-height: 1;
     color: var(--color-gray);
     transition: font-size 0.2s ease-in-out;
   }
-  
+
   &__btn {
     display: flex;
     align-items: center;
@@ -39,7 +42,7 @@
       fill: var(--color-sundance);
     }
   }
-  
+
   &__date {
     position: absolute;
     right: 0;
@@ -52,7 +55,7 @@
     opacity: 0;
     z-index: 2;
     cursor: pointer;
-    
+
     & + span {
       position: absolute;
       display: block;
@@ -64,32 +67,28 @@
       border-radius: 10px;
       transition: border-color 0.3s ease;
     }
-    
+
     &:focus {
       & + span {
         border-color: var(--color-sundance);
       }
     }
   }
-    
+
   &__date::-webkit-calendar-picker-indicator {
     position: absolute;
     right: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background-size: 0;
     background-color: transparent;
     cursor: pointer;
 
-    
+
   }
-  
+
   &__text {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 17px;
+    color: var(--color-light);
   }
 
   input:active + .label .field-date__btn {
@@ -97,11 +96,11 @@
       fill: var(--color-sundance);
     }
   }
-  
+
   // &__placeholder {
   //   color: #bbb;
   //   font-size: 14px;
   //   margin-bottom: 5px;
   // }
-  
+
 }

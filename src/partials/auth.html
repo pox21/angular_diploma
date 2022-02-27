@@ -13,7 +13,7 @@
           <li class="auth-slider__slide swiper-slide">
             <img src="123" alt="img-name">
           </li>
-        </ul>   
+        </ul>
       </div>
       <button class="auth-slider__btn-prev arrow-btn">
         <svg>
@@ -26,20 +26,20 @@
         </svg>
       </button>
     </div>
-    
+
     <form action="#" class="auth__form form">
       <h2 class="form__title form__title--size">Авторизация</h2>
-      <label class="label form__label label--error">
-        <span class="label__error-text">Проверьте правильность данных</span>
-        <input class="label__input" type="tel" placeholder=" " name="phone">
-        <span class="label__text">Номер телефона:</span>
-      </label>
-      <label class="label form__label">
-        <!-- <span class="label__error-text">Проверьте правильность данных</span> -->
-        <input class="label__input" type="password" placeholder=" " name="password">
-        <span class="label__text">Пароль:</span>
-      </label>
-      <button class="btn-link form__button form__button--primary" type="submit">Войти</button>
+      <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height form-control--error">
+        <span class="form-control__error-text fs-extra-small">Проверьте правильность данных</span>
+        <input class="form-control__input" id="tel" type="text" placeholder=" " name="phone" value="+7 (000) 000 00-00">
+        <label class="form-control__label" for="tel">Номер телефона:</label>
+      </div>
+      <div class="form-control fs-small form-control--bgc-ebony-clay form-control--min-height ">
+        <span class="form-control__error-text fs-extra-small">Проверьте правильность данных</span>
+        <input class="form-control__input" id="pass" type="password" placeholder=" " name="pass" value="123456789">
+        <label class="form-control__label" for="pass">Пароль:</label>
+      </div>
+      <button class="btn btn--primary form__button" type="submit">Войти</button>
     </form>
   </div>
 

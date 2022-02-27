@@ -4,10 +4,16 @@
 @import "fonts";
 @import "settings";
 
-
-@import "./components/label";
-@import "./components/select";
+// кнопки, элементы формы, размеры шрифтов, тултип
+@import "./components/fonts";
+@import "./components/btn-tab";
+@import "./components/buttons";
 @import "./components/form";
+@import "./components/checkbox";
+@import "./components/form-control";
+@import "./components/field-date";
+@import "./components/select";
+@import "./components/tooltip";
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -15,17 +21,9 @@
 @import "./components/payments-history";
 @import "./components/auth";
 
-// @import "./components/footer";
-
 // подключение маленьких компонентов страницы
 @import "./components/nav";
 @import "./components/profile";
 @import "./components/tabs";
-@import "./components/form-search";
 @import "./components/history-card";
 @import "./components/back-btn";
-@import "./components/field-date";
-// @import "./components/header-contacts";
-// @import "./components/video-block";
-// @import "./components/learn-more";
-// @import "./components/social";

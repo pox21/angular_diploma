@@ -1,57 +1,65 @@
 <section class="account">
   <h1 class="account-title visually-hidden">Основной счет</h1>
+
   <div class="container account__container">
     <div class="account__account-box account-box">
       <div class="account-box__wrapper">
-        <span class="account-box__text">Основной счет</span>
-        <span class="account-box__number">80415 123 400000033871</span>
+        <span class="account-box__text fs-extra-small">Основной счет</span>
+        <span class="account-box__number fs-txt">80415 123 400000033871</span>
       </div>
       <div class="account-box__buttons">
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#add"/>
             </svg>
           </span>
           <span>Новый платёж</span>
-          
         </button>
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#file"/>
             </svg>
           </span>
           Выставить счет
         </button>
-        <button class="account-box__btn btn-link">
-          <span class="account-box__btn-icon">
+
+        <button class="account-box__btn btn btn--secondary">
+          <span class="btn__icon">
             <svg>
               <use xlink:href="img/sprite.svg#download"/>
             </svg>
           </span>
           Загрузить выписку
         </button>
+
       </div>
     </div>
     <div class="account__info info">
-      <span class="info__all-money">1 420 000,<span>00₽</span></span>
+      <span class="info__all-money fs-h1">1 420 000,<span>00₽</span></span>
       <span class="info__item">
-        <span class="info__text">Собственные</span>
-        <span class="info__money">896 000,00 ₽</span>
+        <span class="info__text fs-extra-small">Собственные</span>
+        <span class="info__money fs-small">
+          896 000,00 ₽
+        </span>
       </span>
       <span class="info__item">
-        <span class="info__text">Заёмные</span>
-        <span class="info__money">123 000,00 ₽</span>
+        <span class="info__text fs-extra-small">Заёмные</span>
+        <span class="info__money fs-small">
+          123 000,00 ₽
+        </span>
       </span>
       <span class="info__item">
-        <span class="info__text">Движения средств за месяц</span>
-        <span class="info__money">
+        <span class="info__text fs-extra-small">Движения средств за месяц</span>
+        <span class="info__money fs-small">
           <span class="info__money--green">+53 000,00 ₽</span>
-        <span class="info__money--red">-13 000,00 ₽</span>
+          <span class="info__money--red">-13 000,00 ₽</span>
         </span>
       </span>
     </div>
-    
+
   </div>
 </section>
